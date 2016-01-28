@@ -44,6 +44,7 @@
     "webpack-dev-server": "^1.14.1"
   },
   "dependencies": {
+    "buildo-react-components": "github:buildo/react-components",
     "debug": "^2.2.0",
     "fixed-data-table": "^0.4.7",
     "intl": "^1.0.1",

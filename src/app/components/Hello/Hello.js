@@ -1,6 +1,7 @@
 import React from 'react';
 import { t, skinnable, props, pure } from 'revenge';
 import { intlMethods } from 'intlHelpers';
+import { FlexView } from 'Basic';
 
 import './hello.scss';
 
@@ -24,9 +25,9 @@ export default class Hello extends React.Component {
 
   template({ greeting, username }) {
     return (
-      <div className='hello'>
+      <FlexView className='hello'>
         <h2>{greeting} {username}</h2>
-      </div>
+      </FlexView>
     );
   }
 

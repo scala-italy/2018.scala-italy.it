@@ -1,6 +1,6 @@
 import React from 'react';
 import { props, t } from 'revenge';
-import { intl } from 'Basic';
+import { intl, FlexView } from 'Basic';
 import { intlMethods } from 'intlHelpers';
 
 const intlProps = {
@@ -21,10 +21,12 @@ export default class AppContainer extends React.Component {
 
   render() {
     return (
-      <div style={{ height: '100%' }}>
-        <h1>{this.formatMessage('App.title')}</h1>
+      <FlexView height='100%'>
+        <h1 style={{ textAlign: 'center' }}>
+          {this.formatMessage('App.title')}
+        </h1>
         {this.props.child}
-      </div>
+      </FlexView>
     );
   }
 
