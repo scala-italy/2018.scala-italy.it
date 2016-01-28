@@ -1,0 +1,19 @@
+// BORDER-BOX
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// PREVENT BOUNCE SCROLLING IN OSX
+
+html {
+  overflow: hidden;
+}
+
+html, body, {
+  height: 100%;
+}

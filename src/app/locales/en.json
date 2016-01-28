@@ -1,0 +1,11 @@
+{
+  "locales": ["en"],
+  "messages": {
+    "App": {
+      "title": "Yet another revenge app"
+    },
+    "Hello": {
+      "hello": "hello"
+    }
+  }
+}
