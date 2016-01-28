@@ -8,7 +8,7 @@ import Hello from 'HelloContainer';
 // prop, no longer there in react-router 1.0+
 // That's why `handler` is there.
 export default (
-  <Route path='/' component={App} handler={App}>
-    <Route path=':username' component={Hello} handler={Hello} />
+  <Route component={App} handler={App}>
+    <Route path='/' component={Hello} handler={Hello} />
   </Route>
 );

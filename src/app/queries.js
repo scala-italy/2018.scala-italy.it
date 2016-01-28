@@ -1,17 +1,15 @@
-// import { Query, t } from 'revenge';
+import { Query } from 'revenge';
 
-export default (/* API */) => {
+export default (API) => {
 
-  // const user = Query({
-  //   id: 'user',
-  //   cache: 'manual',
-  //   cacheParams: {
-  //     token: t.String
-  //   },
-  //   fetch: ({ token }) => () => API.getUser({ token })
-  // });
+  const user = Query({
+    id: 'user',
+    fetch: () => () => {
+      return API.getUser();
+    }
+  });
 
   return {
-    // user
+    user
   };
 };

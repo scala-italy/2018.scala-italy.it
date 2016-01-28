@@ -1,6 +1,5 @@
 import React from 'react';
-import { props, t, skinnable } from 'revenge';
-import { intl } from 'Basic';
+import { queries, props, t, skinnable } from 'revenge';
 import Hello from 'Hello/Hello';
 
 const intlProps = {
@@ -9,17 +8,19 @@ const intlProps = {
   formats: t.Any
 };
 
-@intl
+@queries(['user'])
 @skinnable()
 @props({
   app: t.Obj,
   params: t.Obj,
+  user: t.maybe(t.Obj),
+  readyState: t.Obj,
   ...intlProps
 })
 export default class HelloContainer extends React.Component {
 
   getLocals() {
-    const { username } = this.props.params;
+    const username = this.props.user ? this.props.user.name.first : null;
 
     return {
       username
@@ -28,7 +29,9 @@ export default class HelloContainer extends React.Component {
 
   template({ username }) {
     return (
-      <Hello username={username} />
+      <div>
+        {username && <Hello username={username} />}
+      </div>
     );
   }
 
