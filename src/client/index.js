@@ -2,6 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import config from '../../config';
 import { CookieSerializer, t } from 'revenge';
+import { createRoutes, browserHistory, hashHistory, Router, RouterContext } from 'react-router';
+import API from 'HTTPAPI';
+import DB from 'DB';
+import App from 'App';
+import loadLocale from './loadLocale';
+import debug from 'debug';
+import routes from 'routes';
+
+import 'assets';
+
 
 if (process.env.NODE_ENV === 'development') {
   // Monkey-patch fixed data table so that expensive prop type checks are avoided in dev mode
@@ -33,29 +43,18 @@ if (process.env.NODE_ENV === 'development') {
   debug.disable();
 }
 
-import 'assets';
-
-import { createRoutes, browserHistory, hashHistory, Router, RouterContext } from 'react-router';
-import API from 'HTTPAPI';
-import DB from 'DB';
-import App from 'App';
-import loadLocale from './loadLocale';
-import debug from 'debug';
-import routes from 'routes';
-
 const log = debug('app:client');
 
-function renderApp(mountNode: HTMLElement, initialData: ?Object, data = {}) {
+function renderApp(mountNode: HTMLElement, _initialData: ?Object, data = {}) {
 
   return function renderAppWithLocale(intlData) {
 
-    if (!initialData) {
-      const token = CookieSerializer.deserialize();
-      initialData = DB.getDefaultData(token);
-    }
+    const initialData = _initialData ? _initialData : DB.getDefaultData(
+      CookieSerializer.deserialize()
+    );
 
     const db = new DB(initialData);
-    const app = main.app = new App({
+    const app = main.app = new App({ // eslint-disable-line no-use-before-define
       API, db, data,
       remote: config.remote ? '/__remote' : false
     });
