@@ -1,6 +1,5 @@
 import config from '../../config';
-import repeat from 'lodash/repeat';
-import partialRight from 'lodash/partialRight';
+import { repeat, partialRight } from 'lodash';
 import { t } from 'revenge';
 
 function longerStrings(data) {
