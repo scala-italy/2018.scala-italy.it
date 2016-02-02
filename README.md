@@ -20,6 +20,7 @@ A basic revenge application, with some common functionalities already in place.
 2. [Authentication]('#authentication')
 3. [i18n]('#i18n')
 4. [Basic components]('#basic-components')
+5. [Domain model]('#domain-model')
 
 ## Queries
 [`revenge`](https://github.com/buildo/revenge) provides a `@queries` decorator for declaring data dependencies on components. An example of `@queries` usage is shown in [`app/containers/AuthContainer.js`](https://github.com/buildo/revenge-webseed/blob/master/src/app/containers/AuthContainer.js), that uses the `user` query.
@@ -74,3 +75,15 @@ Basic components are building blocks for all the application's components. They 
 This webseed comes with a dependency on [`buildo/react-components`](https://github.com/buildo/react-components) and some of them are cherry-picked in [`app/components/Basic/index.js`](https://github.com/buildo/revenge-webseed/blob/master/src/app/components/Basic/index.js).
 
 An example of customization over a third-party component is [`app/components/Basic/LoadingSpinner/LoadingSpinner.js`](https://github.com/buildo/revenge-webseed/blob/master/src/app/components/Basic/LoadingSpinner/LoadingSpinner.js).
+
+## Domain model
+> A domain model is a system of abstractions that describes selected aspects of a sphere of knowledge, influence, or activity (a domain).
+
+-- *https://en.wikipedia.org/wiki/Domain_model*
+
+A domain model represents the abstractions we want to work with. In a revenge app, they're modeled using  [`tcomb`](https://github.com/gcanti/tcomb/).
+`tcomb` allows for both definition and runtime validation of the domain objects. Whenever an object does not conform to its definition, `tcomb` will raise a warning (only in development).
+
+This is especially useful when interacting with a REST API that may change over time. Any change or error in the API spec will be caught early on by the `tcomb` validation, allowing for a fast debugging experience.
+
+Each domain object is defined in [`/app/domain`](https://github.com/buildo/revenge-webseed/tree/master/src/app/domain). This webseed ships with an example definition for the `User` domain object ([`app/domain/User.js`](https://github.com/buildo/revenge-webseed/tree/master/src/app/domain/User.js)).
