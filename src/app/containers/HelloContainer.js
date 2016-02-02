@@ -1,6 +1,7 @@
 import React from 'react';
 import { props, t, skinnable } from 'revenge';
 import Hello from 'Hello/Hello';
+import { User } from 'domain';
 
 @skinnable()
 @props({

@@ -12,5 +12,6 @@ module.exports = {
   NODE_MODULES: path.resolve(__dirname, 'node_modules'),
   COMPONENTS: path.resolve(__dirname, 'src/app/components'),
   BASIC_COMPONENTS: path.resolve(__dirname, 'src/app/components/Basic'),
-  CONTAINERS: path.resolve(__dirname, 'src/app/containers')
+  CONTAINERS: path.resolve(__dirname, 'src/app/containers'),
+  DOMAIN: path.resolve(__dirname, 'src/app/domain')
 };
