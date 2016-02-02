@@ -72,7 +72,7 @@ module.exports = {
   ],
 
   module: {
-    preLoaders: preLoaders,
+    preLoaders,
     loaders: [{
       test: /\.jsx?$/, // test for both js and jsx
       loaders: ['babel'],
@@ -89,7 +89,7 @@ module.exports = {
       loader: 'file?name=[path][name].[ext]'
     }, {
       test: paths.THEME_VARIABLES,
-      loader: 'sass-variables'
+      loader: 'sass-variable'
     }]
   }
 };

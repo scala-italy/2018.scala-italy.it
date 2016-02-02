@@ -3,36 +3,28 @@ import { pure, skinnable, props, t } from 'revenge';
 import LoadingSpinnerBuildo from 'buildo-react-components/src/loading-spinner';
 
 import 'buildo-react-components/src/loading-spinner/style.scss';
-// import colors from 'theme/variables.scss';
-
-const theme = t.enums.of(['light', 'dark']);
-
-export const loadingSpinnerProps = {
-  message: t.maybe(t.Str),
-  theme: t.maybe(theme),
-  size: t.maybe(t.union([t.Str, t.Num])),
-  color: t.maybe(t.Str),
-  overlayColor: t.maybe(t.Str)
-};
-
-export const loadingSpinnerDefaultProps = {
-  message: '',
-  theme: 'light'
-};
+import colors from 'theme/variables.scss';
 
 @pure
 @skinnable()
-@props(loadingSpinnerProps)
+@props({
+  message: t.maybe(t.Str),
+  size: t.maybe(t.union([t.Str, t.Num])),
+  color: t.maybe(t.Str),
+  overlayColor: t.maybe(t.Str)
+})
 export default class LoadingSpinner extends React.Component {
 
-  static defaultProps = loadingSpinnerDefaultProps;
+  static defaultProps = {
+    message: '',
+    overlayColor: colors.white90
+  };
 
   getLocals() {
-    const color = this.props.color;
-    const overlayColor = this.props.overlayColor || (this.props.theme === 'light' ? colors.white90 : colors.gray90);
+    const { color, overlayColor } = this.props;
     const message = {
       content: this.props.message,
-      color: this.props.message && this.props.color
+      color: this.props.message && color
     };
     const { size } = this.props;
     return {
