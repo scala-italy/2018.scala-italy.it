@@ -22,12 +22,12 @@ A basic revenge application, with some common functionalities already in place.
 4. [Basic components]('#basic-components')
 
 ## Queries
-`revenge` provides a `@queries` decorator for declaring data dependencies on components. An example of `@queries` usage is shown in `app/containers/AuthContainer.js`, that uses the `user` query.
+[`revenge`](https://github.com/buildo/revenge) provides a `@queries` decorator for declaring data dependencies on components. An example of `@queries` usage is shown in [`app/containers/AuthContainer.js`](https://github.com/buildo/revenge-webseed/blob/master/src/app/containers/AuthContainer.js), that uses the `user` query.
 
-Queries definitions are in `app/queries.js`. This webseed comes with an example query, which is the aforementioned `user` query.
+Queries definitions are in [`app/queries.js`](https://github.com/buildo/revenge-webseed/blob/master/src/app/queries.js). This webseed comes with an example query, which is the aforementioned `user` query.
 
 ## Authentication
-In `app/routes.js` you'll find two main route trees under `App`:
+In [`app/routes.js`](https://github.com/buildo/revenge-webseed/blob/master/src/app/routes.js) you'll find two main route trees under `App`:
 
 - `LoginRoute`
 - `AuthenticatedRoute`
@@ -41,7 +41,7 @@ In `app/routes.js` you'll find two main route trees under `App`:
 ## i18n
 Several i18n facilities are provided (built on top of `react-intl`).
 
-`app/Hello/Hello.js` shows an example of using the `intlMethods` decorator to access the i18n facilities.
+[`app/Hello/Hello.js`](https://github.com/buildo/revenge-webseed/blob/master/src/app/components/Hello/Hello.js) shows an example of using the `intlMethods` decorator to access the i18n facilities.
 
 The greeting displayed to the user is translated using `this.formatMessage` (injected by the decorator).
 
@@ -49,7 +49,7 @@ The greeting displayed to the user is translated using `this.formatMessage` (inj
 const greeting = this.formatMessage('Hello.hello');
 ```
 
-This looks for the `Hello.hello` translation key for the current locale, whose definition file is placed in `app/locales/{localeName}.json`. For instance, `en.json` contains:
+This looks for the `Hello.hello` translation key for the current locale, whose definition file is placed in `app/locales/{localeName}.json`. For instance, [`en.json`](https://github.com/buildo/revenge-webseed/blob/master/src/app/locales/en.json) contains:
 
 ```json
 {
@@ -66,11 +66,11 @@ so `greeting` will evaluate to `"Hello"`.
 
 In order to keep the bundle size as small as possible, locale files are dynamically requested according to the user's preferred language (this uses the webpack bundle splitting feature).
 
-Same goes for the `Intl` polyfill required by some browsers (e.g. Safari): it is provided as a separate bundle and requested only if needed.
+Same goes for the [`Intl.js` polyfill](https://github.com/andyearnshaw/Intl.js/) required by some browsers (e.g. Safari): it is provided as a separate bundle and requested only if needed.
 
 ## Basic components
 Basic components are building blocks for all the application's components. They are highly reusable components, and they are often customization over third parties components.
 
-This webseed comes with a dependency on `buildo-react-components` and some of them are cherry-picked in `app/components/Basic/index.js`.
+This webseed comes with a dependency on [`buildo/react-components`](https://github.com/buildo/react-components) and some of them are cherry-picked in [`app/components/Basic/index.js`](https://github.com/buildo/revenge-webseed/blob/master/src/app/components/Basic/index.js).
 
-An example of customization over a third-party component is `app/components/Basic/LoadingSpinner/LoadingSpinner.js`.
+An example of customization over a third-party component is [`app/components/Basic/LoadingSpinner/LoadingSpinner.js`](https://github.com/buildo/revenge-webseed/blob/master/src/app/components/Basic/LoadingSpinner/LoadingSpinner.js).
