@@ -14,13 +14,6 @@ import 'assets';
 
 
 if (process.env.NODE_ENV === 'development') {
-  // Monkey-patch fixed data table so that expensive prop type checks are avoided in dev mode
-  require('patch-fixed-data-table');
-
-  // Make tcomb structs "strict"
-  // TODO(gio): check this works for real
-  // require('patch-tcomb-struct');
-
   // lighten stringify
   // TODO(gio): maybe not..
   // convert assert messages to lazy ones in all deps instead?
