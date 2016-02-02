@@ -4,11 +4,11 @@ import { User } from 'domain';
 
 @queries(['user'])
 @props({
-  app: t.Obj,
+  app: t.Object,
   child: t.ReactChild,
-  params: t.Obj,
-  user: t.maybe(t.Obj),
-  readyState: t.Obj
+  params: t.Object,
+  user: t.maybe(User),
+  readyState: t.Object
 })
 export default class AuthContainer extends React.Component {
 

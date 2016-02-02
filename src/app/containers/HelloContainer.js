@@ -5,9 +5,9 @@ import { User } from 'domain';
 
 @skinnable()
 @props({
-  app: t.Obj,
-  params: t.Obj,
-  user: t.maybe(t.Obj)
+  app: t.Object,
+  params: t.Object,
+  user: t.maybe(User)
 })
 export default class HelloContainer extends React.Component {
 

@@ -8,7 +8,7 @@ import Login from 'Login/Login';
 @props({
   app: t.Obj,
   params: t.Obj
-}, { strict: false })
+})
 export default class LoginContainer extends React.Component {
 
   doLogin = ({ username, password }) => {
