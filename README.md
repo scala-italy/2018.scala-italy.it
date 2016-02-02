@@ -16,11 +16,11 @@ It will start a webpack-dev-server, running at hostname/port specified in the `c
 A basic revenge application, with some common functionalities already in place.
 
 ## Table of Contents
-1. [Queries]('#queries')
-2. [Authentication]('#authentication')
-3. [i18n]('#i18n')
-4. [Basic components]('#basic-components')
-5. [Domain model]('#domain-model')
+1. [Queries](#queries)
+2. [Authentication](#authentication)
+3. [i18n](#i18n)
+4. [Basic components](#basic-components)
+5. [Domain model](#domain-model)
 
 ## Queries
 [`revenge`](https://github.com/buildo/revenge) provides a `@queries` decorator for declaring data dependencies on components. An example of `@queries` usage is shown in [`app/containers/AuthContainer.js`](https://github.com/buildo/revenge-webseed/blob/master/src/app/containers/AuthContainer.js), that uses the `user` query.
