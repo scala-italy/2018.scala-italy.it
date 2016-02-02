@@ -1,4 +1,4 @@
-import { App } from 'revenge';
+import { App, CookieSerializer } from 'revenge';
 import getQueries from 'queries';
 import getCommands from 'queries';
 
@@ -45,6 +45,32 @@ export default class RevengeApp extends App { // eslint-disable-line no-copy-pas
 
   isAuthenticated() {
     return !!this.db.getToken();
+  }
+
+  fetch(...args) {
+    return super.fetch(...args).catch(res => {
+      if (res.status === 401 && this.isAuthenticated()) {
+        return this.doLogout();
+      }
+    });
+  }
+
+  doLogin(username, password) {
+    const data = { username, password };
+    return this.API.login({ data }).then(({ token }) => {
+      this.update(() => this.db.setToken(token));
+      CookieSerializer.serialize(token);
+    });
+  }
+
+  doLogout() {
+    return new Promise(resolve => {
+      this.update(() => {
+        this.db.setToken(null);
+        CookieSerializer.serialize(null);
+        resolve();
+      });
+    });
   }
 
 }

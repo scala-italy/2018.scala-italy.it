@@ -6,6 +6,13 @@
     },
     "Hello": {
       "hello": "hello"
+    },
+    "Login": {
+      "login": "Login",
+      "username": "username",
+      "password": "password",
+      "error": "error",
+      "processing": "processing"
     }
   }
 }

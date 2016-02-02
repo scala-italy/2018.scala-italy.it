@@ -6,6 +6,13 @@
     },
     "Hello": {
       "hello": "ciao"
+    },
+    "Login": {
+      "login": "Login",
+      "username": "nome utente",
+      "password": "password",
+      "error": "errore",
+      "processing": "login in corso"
     }
   }
 }

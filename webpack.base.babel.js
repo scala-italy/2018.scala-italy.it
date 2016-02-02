@@ -16,6 +16,24 @@ const preLoaders = config.eslint ? [{
   exclude: paths.ASSETS
 }] : [];
 
+const replaceModule = ({ module, replacement }) => {
+  return {
+    apply(resolver) {
+      resolver.plugin('module', function (req, cb) {
+        if (req.request === module) {
+          const request = {
+            path: req.path,
+            request: replacement
+          };
+          this.doResolve('module', request, cb);
+        } else {
+          cb();
+        }
+      });
+    }
+  };
+};
+
 module.exports = {
 
   resolve: {
@@ -46,7 +64,11 @@ module.exports = {
     new webpack.ContextReplacementPlugin(
       /intl\/locale-data\/jsonp$/,
       new RegExp('^\.\/(' + supportedLocales.join('|') + ')\.js$')
-    )
+    ),
+    new webpack.ResolverPlugin([replaceModule({
+      module: 'react/lib/invariant',
+      replacement: 'invariant'
+    })])
   ],
 
   module: {

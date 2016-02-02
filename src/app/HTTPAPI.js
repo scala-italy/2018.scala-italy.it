@@ -1,10 +1,16 @@
 import API from './API';
 
 const impl = {
+
+  login() {
+    return Promise.resolve({
+      token: '123acb'
+    });
+  },
+
   getUser() {
-    return fetch('https://randomuser.me/api/')
-      .then(res => res.json())
-      .then(json => json.results[0].user);
+    return fetch('http://uinames.com/api/')
+      .then(res => res.json());
   }
 };
 

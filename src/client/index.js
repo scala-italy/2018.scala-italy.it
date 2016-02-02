@@ -65,10 +65,17 @@ function renderApp(mountNode: HTMLElement, _initialData: ?Object, data = {}) {
 
     const history = config.iso ? browserHistory : hashHistory;
 
+    const decorateRoute = route => {
+      if (route.childRoutes) {
+        route.childRoutes = route.childRoutes.map(decorateRoute);
+      }
+      return { ...route, app };
+    };
+
     ReactDOM.render(
       <Router
         history={history}
-        routes={createRoutes(routes)}
+        routes={createRoutes(routes).map(decorateRoute)}
         render={(props) => {
           const { params, routes, location: { query } } = props;
           if (doFetch) {
@@ -79,7 +86,10 @@ function renderApp(mountNode: HTMLElement, _initialData: ?Object, data = {}) {
           return <RouterContext {...props} />;
         }}
         createElement={(Component, { params, children }) => {
-          const props = { app, params, ...intlData };
+          let props = { app, params };
+          if (Component.name === 'IntlWrapper') {
+            props = { ...props, ...intlData };
+          }
           if (children) {
             props.child = children;
           }
