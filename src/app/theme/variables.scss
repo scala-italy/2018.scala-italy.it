@@ -5,7 +5,7 @@ $black: black;
 $white: white;
 
 //GRAYSCALE
-$charcoal: #303840;
+$charcoalGrey: #3c474b;
 $gunmetal: #3C424D;
 $raven: #6F7681;
 $grayChateau: #A2A8B2;
@@ -14,6 +14,8 @@ $paleGrey: #DBDDE2;
 $coolGrey: #E9EAED;
 $alabaster: #F1F2F3;
 $ice: #F7F8F9;
+$navy: #002029;
+$neonRed: #ff0037;
 
 // PRIMARY COLOR
 $dirtyBlue: #3c96a7;
@@ -21,7 +23,6 @@ $aquamarine: #45a7b9;
 $aquamarine50: rgba($aquamarine, .5);
 $aquaSky: #BEE0E7;
 $tradeWind: #E8F4F6;
-
 
 $coolGreen: #2fba5e;
 
@@ -55,9 +56,14 @@ $c10: #ffff99;
 $c11: #e31a1c;
 $c12: #b15928;
 
+$italianGreen: #069481;
+
 // ALIAS COLORS
 // SHOULD ONLY REFER TO ZEPLIN VARIABLES
 $border-color: $paleGrey;
+
+$primaryTextColor: $paleGrey;
+$secondaryTextColor: $grayChateau;
 
 // PADDING
 $padding-small: 7px;

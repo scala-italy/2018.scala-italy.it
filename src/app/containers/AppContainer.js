@@ -21,10 +21,7 @@ export default class AppContainer extends React.Component {
 
   render() {
     return (
-      <FlexView height='100%'>
-        <h1 style={{ textAlign: 'center' }}>
-          {this.formatMessage('App.title')}
-        </h1>
+      <FlexView column>
         {this.props.child}
       </FlexView>
     );

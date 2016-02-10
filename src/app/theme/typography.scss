@@ -16,7 +16,16 @@ h2 {
 }
 
 h3 {
-  font-weight: 400;
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 1.5;
+}
+
+h4 {
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-size: 16px;
   line-height: 1.5;
 }
 
@@ -45,7 +54,7 @@ input {
   border: 1px solid $paleGrey;
   font-weight: $semibold;
   font-size: 14px;
-  color: $charcoal;
+  color: $charcoalGrey;
   box-sizing: border-box;
 
   &::-webkit-input-placeholder {

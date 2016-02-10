@@ -1,0 +1,74 @@
+@import '~theme/variables.scss';
+
+.footer {
+  background-color: $navy;
+  color: $gunmetal;
+
+  h3, h4 {
+    color: $white;
+    margin-top: 0;
+  }
+
+  .footer-section {
+
+    padding: 30px;
+
+    &.social {
+      border-right: 2px solid $charcoalGrey;
+      border-bottom: 2px solid $charcoalGrey;
+    }
+
+    &.sponsors {
+      border-bottom: 2px solid $charcoalGrey;
+    }
+
+    &.tickets {
+      border-right: 2px solid $charcoalGrey;
+    }
+
+  }
+
+  .sponsors {
+    .sponsor-logos {
+
+      img {
+        max-width: 250px;
+      }
+    }
+  }
+
+  .second-row {
+    margin-top: 20px;
+
+    .social-button {
+      margin: 10px;
+      max-width: 100px;
+      border: 2px solid $silver;
+      background-color: transparent;
+      color: $silver;
+      cursor: pointer;
+      font-family: 'Monaco';
+      font-size: 14px;
+
+      &:hover {
+        color: darken($silver, 50%);
+        background-color: lighten($silver, 10%);
+      }
+    }
+  }
+
+  .action-button {
+    max-width: 300px;
+    color: $primaryTextColor;
+    font-size: 16px;
+    font-family: 'Monaco';
+    font-weight: bold;
+    background-color: $neonRed;
+    margin-top: 30px;
+
+    &:hover {
+      background-color: lighten($neonRed, 10%);
+    }
+  }
+
+}

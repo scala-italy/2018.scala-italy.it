@@ -1,0 +1,46 @@
+@import '~theme/variables.scss';
+
+.mailchimp-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h2 {
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+
+  h3 {
+    color: $primaryTextColor;
+    margin-top: 2px;
+    font-family: 'Montserrat' !important;
+    font-size: 18px !important;
+  }
+
+  input[type="email"] {
+    display: inline-block;
+    font-size: 17px;
+    height: 53px;
+    text-indent: 3.8%;
+  }
+
+  .action-button {
+    display: inline-block;
+    max-width: 300px;
+    color: $primaryTextColor;
+    font-size: 16px;
+    font-family: 'Monaco';
+    font-weight: bold;
+    background-color: $neonRed;
+    margin-top: 30px;
+    height: 53px;
+    vertical-align: bottom;
+    margin-left: -4px;
+    border: none;
+
+    &:hover {
+      background-color: lighten($neonRed, 10%);
+    }
+  }
+
+}
