@@ -14,7 +14,7 @@ export default class Footer extends React.Component {
   onTwitterClick = () => window.open('https://twitter.com/scala-italy', '_blank');
 
   //TODO: actual url
-  onGPlusClick = () => window.open('', '_blank');
+  onGPlusClick = () => window.open('https://plus.google.com/communities/107201018445276034960', '_blank');
 
   //TODO: actual url
   onBecomeSponsorClick = () => window.open('', '_blank');

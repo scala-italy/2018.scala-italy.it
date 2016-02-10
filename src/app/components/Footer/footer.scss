@@ -40,6 +40,13 @@
   .second-row {
     margin-top: 20px;
 
+    .email {
+      color: $silver;
+      font-size: 14px;
+      font-family: 'Monaco';
+      text-decoration: underline;
+    }
+
     .social-button {
       margin: 10px;
       max-width: 100px;
