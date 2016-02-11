@@ -1,4 +1,6 @@
 @import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://i.icomoon.io/public/5ba04e2a5e/ScalaItaly2016/style.css);
+@import '~theme/variables.scss';
 
 // BORDER-BOX
 
@@ -18,4 +20,32 @@ html, body, {
 
 .flex-view {
   box-sizing: border-box;
+}
+
+.section-name {
+  -webkit-touch-callout: none; 
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+  user-select: none;
+  font-family: 'Monaco';
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  transform:  translateX(-50%) translateY(-50%) rotate(90deg);
+  text-transform: uppercase;
+
+  &.left {
+    left: 20px;
+  }
+
+  &.right {
+    right: -110px;
+  }
+
+  &.light {
+    color: $italianGreen;
+  }
 }

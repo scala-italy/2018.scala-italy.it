@@ -1,0 +1,29 @@
+@import '~theme/variables.scss';
+
+.conference {
+  padding: 60px;
+
+  background-color: $navy;
+  position: relative;
+
+  .section-name.right {
+    right: -90px;
+  }
+
+  p {
+    color: $coolGrey;
+    font-family: 'Monaco';
+    font-size: 18px;
+  }
+
+  .image-wrapper {
+    @media only screen and (max-width: 800px) {
+      display: none;
+    }
+  }
+  img {
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+  }
+}

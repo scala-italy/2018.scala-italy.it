@@ -37,6 +37,10 @@
     }
   }
 
+  .social {
+    color: $silver;
+  }
+
   .second-row {
     margin-top: 20px;
 
@@ -57,6 +61,10 @@
       font-family: 'Monaco';
       font-size: 14px;
 
+      @media only screen and (max-width: 500px) {
+        font-size: 13px;
+      }
+
       &:hover {
         color: darken($silver, 50%);
         background-color: lighten($silver, 10%);
@@ -73,9 +81,18 @@
     background-color: $neonRed;
     margin-top: 30px;
 
+    @media only screen and (max-width: 500px) {
+      font-size: 12px;
+    }
+
     &:hover {
       background-color: lighten($neonRed, 10%);
     }
+  }
+
+  .bottom-line {
+    height: 60px;
+    background-color: $navyTwo;
   }
 
 }

@@ -45,11 +45,13 @@ export default function loadLocale(locale) {
       return loadMessagesFor(locale).then(resolve.bind(this));
     }
 
-    require.ensure(['intl'], require => {
-      require('intl');
-      require('intl/locale-data/jsonp/' + locale); // eslint-disable-line prefer-template
+    if (!global.Intl) {
+      require.ensure(['intl'], require => {
+        require('intl');
+        require('intl/locale-data/jsonp/' + locale); // eslint-disable-line prefer-template
 
-      loadMessagesFor(locale).then(resolve.bind(this));
-    });
+        loadMessagesFor(locale).then(resolve.bind(this));
+      });
+    }
   });
 }
