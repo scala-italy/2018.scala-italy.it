@@ -26,7 +26,7 @@ export default class CFP extends React.Component {
         <div className='section-name right'>Become a speaker</div>
         <FlexView style={{ maxWidth: 900 }} className='wrapper'>
           <FlexView column grow={1} hAlignContent='center'>
-            <span className='code-title'>CanSpeakAbout</span>
+            <span className='code-title' />
             <Button className='action-button' buttonState='ready' onClick={onBecomeSpeakerClick}>Become a Speaker</Button>
           </FlexView>
           <FlexView column grow={3} className='cfp-description'>

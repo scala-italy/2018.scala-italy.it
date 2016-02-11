@@ -46,7 +46,7 @@ export default class Footer extends React.Component {
             <FlexView>
             Have something to ask, some suggestion or just want to say hello?
             </FlexView>
-            <FlexView vAlignContent='center' grow row className='second-row' wrap>
+            <FlexView auto vAlignContent='center' grow row className='second-row' wrap>
               <FlexView grow={5} auto>
                 <span className='email'>info@scala-italy.it</span>
               </FlexView>
@@ -79,7 +79,7 @@ export default class Footer extends React.Component {
           </FlexView>
         </FlexView>
         <FlexView className='bottom-line' width='100%' hAlignContent='center' vAlignContent='center'>
-          @ 2016 Scala Italy
+          @ 2016 ImplicItaly Srl
         </FlexView>
       </FlexView>
     );

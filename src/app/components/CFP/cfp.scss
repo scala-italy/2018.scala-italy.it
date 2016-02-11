@@ -20,7 +20,11 @@
     color: $navy;
     margin-bottom: 13px;
 
-    &:hover {
+    &:before {
+      content: 'CanSpeakAbout'
+    }
+
+    &:hover:before {
       content: 'CanBuildFrom'
     }
   }
