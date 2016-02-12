@@ -12,7 +12,7 @@
 
   p {
     color: $coolGrey;
-    font-family: 'Monaco';
+    font-family: 'Monaco', 'Inconsolata', monospace;
     font-size: 18px;
   }
 
@@ -21,6 +21,7 @@
       display: none;
     }
   }
+
   img {
     width: 350px;
     height: 350px;

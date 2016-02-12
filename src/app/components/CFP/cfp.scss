@@ -15,7 +15,7 @@
   }
 
   span.code-title {
-    font-family: 'Monaco';
+    font-family: 'Monaco', 'Inconsolata', monospace;
     font-size: 33px;
     color: $navy;
     margin-bottom: 13px;
@@ -30,7 +30,7 @@
   }
 
   .cfp-description {
-    font-family: 'Monaco';
+    font-family: 'Monaco', 'Inconsolata', monospace;
 
     h3 {
       margin-top: 0;
