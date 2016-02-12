@@ -33,7 +33,6 @@ export default class CFP extends React.Component {
             <h3>Come give a talk at Scala Italy!</h3>
             <p>
               Submit your proposal by <strong>April 3rd</strong> and come sharing your knowledge with the community!
-              If your proposal gets accepted you'll get a free ticket for the conference.
             </p>
           </FlexView>
         </FlexView>
