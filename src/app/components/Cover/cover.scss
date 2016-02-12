@@ -22,9 +22,11 @@
   }
 
   h1 {
+    color: $white;
     text-align: center;
     font-size: 33px;
-    font-weight: 400;
+    font-family: 'Montserrat';
+    font-weight: normal;
     letter-spacing: 0.9px;
     line-height: 40px;
     text-transform: uppercase;
@@ -36,10 +38,11 @@
   }
 
   h3 {
-    color: $secondaryTextColor;
+    color: transparentize($white, 0.3);
     font-family: 'Monaco', 'Inconsolata', monospace;
+    line-height: 40px;
     font-size: 22px;
-    margin-top: 1px;
+    margin-top: 0;
   }
 
   .mailchimp-form {
@@ -49,8 +52,29 @@
     }
     padding: 10px;
     // border: 4px solid $oliveGreen;
+
+    h2 {
+      font-size: 24px;
+      font-family: 'Montserrat';
+      letter-spacing: 0.7px;
+    }
+
     h3 {
+      margin-top: 0;
       margin-bottom: 0;
+      font-size: 19px;
+      font-family: 'Montserrat';
+      color: transparentize($white, 0.3);
+    }
+
+    input[type='text'] {
+      font-size: 16px;
+      font-family: 'Montserrat';
+      font-weight: normal;
+      color: #85979a;
+    }
+
+    input[type='button'].action-button {
     }
   }
 

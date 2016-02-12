@@ -27,16 +27,20 @@
   .action-button {
     display: inline-block;
     max-width: 300px;
-    color: $primaryTextColor;
-    font-size: 16px;
-    font-family: 'Monaco', 'Inconsolata', monospace;
-    font-weight: bold;
     background-color: $neonRed;
     margin-top: 30px;
     height: 53px;
     vertical-align: bottom;
-    margin-left: -4px;
+    margin-left: -5px;
     border: none;
+    padding: 18px 16px;
+
+    font-size: 16px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    line-height: 21px;
+    color: $white;
+    text-transform: uppercase;
 
     &:hover {
       background-color: lighten($neonRed, 10%);

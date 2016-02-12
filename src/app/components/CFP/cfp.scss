@@ -39,6 +39,7 @@
 
     p {
       font-size: 16px;
+      line-height: 32.9px;
     }
 
     strong {
@@ -59,7 +60,7 @@
     text-transform: uppercase;
 
     &:hover {
-      background-color: lighten($neonRed, 10%);
+      background-color: $neonRed;
     }
   }
 }

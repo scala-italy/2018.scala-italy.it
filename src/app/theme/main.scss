@@ -30,8 +30,10 @@ html, body, {
   -moz-user-select: none;
   -ms-user-select: none;
 
+
   user-select: none;
-  font-family: 'Monaco', 'Inconsolata', monospace;
+  font-family: 'Montserrat';
+  font-weight: normal;
   font-size: 14px;
   position: absolute;
   top: 50%;
@@ -47,6 +49,6 @@ html, body, {
   }
 
   &.light {
-    color: $italianGreen;
+    color: $oliveGreen;
   }
 }
