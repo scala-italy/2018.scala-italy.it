@@ -23,7 +23,7 @@ export default class Conference extends React.Component {
         <FlexView style={{ maxWidth: 900 }} >
           <FlexView column grow={5}>
             <p>
-            Scala Italy is the third edition of annual Italian conference on the Scala Programming Language.
+            Scala Italy is the third edition of the annual Italian conference on the Scala Programming Language.
             </p>
             <p>
               It is brought to you by and for the scala <strong>community</strong>. All conference talks are peer evaluated by members of the community itself.

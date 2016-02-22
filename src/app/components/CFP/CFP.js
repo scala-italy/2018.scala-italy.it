@@ -32,7 +32,7 @@ export default class CFP extends React.Component {
           <FlexView column grow={3} className='cfp-description'>
             <h3>Come give a talk at Scala Italy!</h3>
             <p>
-              Submit your proposal by <strong>April 3rd</strong> and come sharing your knowledge with the community!
+              Submit your proposal by <strong>April 3rd</strong> and come share your knowledge with the community!
             </p>
           </FlexView>
         </FlexView>
