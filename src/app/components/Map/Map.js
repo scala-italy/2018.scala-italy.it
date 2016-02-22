@@ -45,7 +45,7 @@ export default class Map extends React.Component {
           <GoogleMap
             defaultCenter={marker.position}
             defaultZoom={14}
-            options={{ scrollwheel: false }}
+            options={{ scrollwheel: false, draggable: false }}
           >
             <Marker {...marker}>
               <InfoWindow>
