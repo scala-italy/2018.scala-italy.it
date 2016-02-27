@@ -15,27 +15,23 @@ export default class Footer extends React.Component {
 
   onGPlusClick = () => window.open('https://plus.google.com/communities/107201018445276034960', '_blank');
 
-  onBecomeSponsorClick = () => window.open('mailto:info@scala-italy.it?subject=Scala%20Italy%20Sponsorship', '_blank');
-
   onBecomeSpeakerClick = () => window.open('https://scalaitaly.typeform.com/to/MeZSjq', '_blank');
 
   getLocals() {
     const {
       onTwitterClick,
       onGPlusClick,
-      onBecomeSponsorClick,
       onBecomeSpeakerClick
     } = this;
 
     return {
       onTwitterClick,
       onGPlusClick,
-      onBecomeSponsorClick,
       onBecomeSpeakerClick
     };
   }
 
-  template({ onTwitterClick, onGPlusClick, onBecomeSponsorClick, onBecomeSpeakerClick }) {
+  template({ onTwitterClick, onGPlusClick, onBecomeSpeakerClick }) {
     return (
       <FlexView hAlignContent='center' column className='footer' width='100%'>
         <FlexView row width='100%'>
