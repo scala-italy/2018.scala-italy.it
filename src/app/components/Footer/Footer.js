@@ -4,7 +4,7 @@ import { FlexView, Button }  from 'Basic';
 
 import './footer.scss';
 
-// import databizLogo from 'assets/images/databiz.png';
+import buildo from 'assets/images/buildo.png';
 
 @pure
 @skinnable()
@@ -13,13 +13,10 @@ export default class Footer extends React.Component {
 
   onTwitterClick = () => window.open('https://twitter.com/scalaitaly', '_blank');
 
-  //TODO: actual url
   onGPlusClick = () => window.open('https://plus.google.com/communities/107201018445276034960', '_blank');
 
-  //TODO: actual url
   onBecomeSponsorClick = () => window.open('mailto:info@scala-italy.it?subject=Scala%20Italy%20Sponsorship', '_blank');
 
-  //TODO: actual url
   onBecomeSpeakerClick = () => window.open('https://scalaitaly.typeform.com/to/MeZSjq', '_blank');
 
   getLocals() {
@@ -44,7 +41,7 @@ export default class Footer extends React.Component {
         <FlexView row width='100%'>
           <FlexView column grow className='footer-section social'>
             <FlexView>
-            Have something to ask, some suggestion or just want to say hello?
+              Have something to ask, some suggestion or just want to say hello?
             </FlexView>
             <FlexView auto vAlignContent='center' grow row className='second-row' wrap>
               <FlexView grow={5} auto>
@@ -52,20 +49,21 @@ export default class Footer extends React.Component {
               </FlexView>
               <FlexView grow={1} auto>
                 <Button icon='twitter' buttonState='ready' className='social-button' onClick={onTwitterClick}>
-                twitter
+                  twitter
                 </Button>
               </FlexView>
               <FlexView grow={1} auto>
                 <Button icon='google-plus' buttonState='ready' className='social-button' onClick={onGPlusClick}>
-                google+
+                  google+
                 </Button>
               </FlexView>
             </FlexView>
           </FlexView>
-          <FlexView column grow className='footer-section sponsors' hAlignContent='center'>
-            <h3>SPONSORS</h3>
-            <FlexView row shrink className='sponsor-logos' />
-            <Button className='action-button' buttonState='ready' onClick={onBecomeSponsorClick}>become a sponsor</Button>
+          <FlexView column grow className='footer-section partners' hAlignContent='center'>
+            <h3>PARTNERS</h3>
+            <FlexView row shrink className='partners-logos'>
+              <a href='http://buildo.io'><img src={buildo} /></a>
+            </FlexView>
           </FlexView>
         </FlexView>
         <FlexView row width='100%'>
