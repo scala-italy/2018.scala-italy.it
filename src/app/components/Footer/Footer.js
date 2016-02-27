@@ -58,7 +58,7 @@ export default class Footer extends React.Component {
           <FlexView column grow className='footer-section partners' hAlignContent='center'>
             <h3>PARTNERS</h3>
             <FlexView row shrink className='partners-logos'>
-              <a href='http://buildo.io'><img src={buildo} /></a>
+              <a href='http://buildo.io' target='_blank'><img src={buildo} /></a>
             </FlexView>
           </FlexView>
         </FlexView>
