@@ -5,6 +5,7 @@ import { FlexView, Button }  from 'Basic';
 import './footer.scss';
 
 import buildo from 'assets/images/buildo.png';
+import databiz from 'assets/images/databiz_white.png';
 
 @pure
 @skinnable()
@@ -57,7 +58,8 @@ export default class Footer extends React.Component {
           </FlexView>
           <FlexView column grow className='footer-section partners' hAlignContent='center'>
             <h3>PARTNERS</h3>
-            <FlexView row shrink className='partners-logos'>
+            <FlexView row shrink className='partners-logos' vAlignContent='center'>
+              <a href='http://databiz.it' target='_blank'><img src={databiz} style={{ maxWidth: 210 }}/></a>
               <a href='http://buildo.io' target='_blank'><img src={buildo} /></a>
             </FlexView>
           </FlexView>
