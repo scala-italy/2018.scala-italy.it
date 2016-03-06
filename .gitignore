@@ -2,5 +2,6 @@
 *.log*
 config*.json
 config*.json~
+!config-ci.json
 node_modules
 build/*

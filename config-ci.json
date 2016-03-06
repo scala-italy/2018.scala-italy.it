@@ -1,0 +1,9 @@
+{
+  "NODE_ENV": "production",
+  "hostname": "localhost",
+  "port": 9091,
+  "apiEndpoint": "http://localhost:8080",
+  "eslint": true,
+  "title": "Scala Italy 2016",
+  "uglify": true
+}
