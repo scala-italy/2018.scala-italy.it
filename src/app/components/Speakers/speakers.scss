@@ -1,3 +1,5 @@
+@import '~theme/variables.scss';
+
 .speakers {
   background-color: #f7f7f7;
   padding: 60px;
@@ -35,6 +37,7 @@
 
 .ReactModal__Overlay {
   cursor: pointer;
+  background-color: transparentize($navy, 0.1) !important;
 }
 
 .ReactModal__Content {
