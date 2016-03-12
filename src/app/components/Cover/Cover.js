@@ -1,7 +1,7 @@
 import React from 'react';
 import { pure, props, skinnable } from 'revenge';
-import { FlexView } from 'Basic';
-import MailchimpForm from 'MailchimpForm/MailchimpForm';
+import { FlexView, Button } from 'Basic';
+// import MailchimpForm from 'MailchimpForm/MailchimpForm';
 
 import './cover.scss';
 import logo from 'assets/images/logo.png';
@@ -10,6 +10,8 @@ import logo from 'assets/images/logo.png';
 @skinnable()
 @props({ })
 export default class Cover extends React.Component {
+
+  onGetTicketsClick = () => window.open('https://ti.to/scala-italy/2016', '_blank');
 
   getLocals() {
     return {};
@@ -21,12 +23,13 @@ export default class Cover extends React.Component {
         <div className="logo" src={logo} />
         <h1>The only Italian conference on Scala</h1>
         <h3>Venice, May 14th, 2016</h3>
-        { /* <Button className='get-ticket' label='get your ticket' /> */ }
-        <MailchimpForm
+        <Button buttonState='ready' className='action-button ticket-button' label='get your tickets' onClick={this.onGetTicketsClick} />
+        {/*<MailchimpForm
           title="Interested?"
           subtitle="Leave your email and we'll keep you posted"
           buttonTitle="Keep me posted"
-        />
+        />*/}
+        <div className="arrow bounce" />
       </FlexView>
     );
   }

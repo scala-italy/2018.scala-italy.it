@@ -18,6 +18,8 @@ export default class Footer extends React.Component {
 
   onBecomeSpeakerClick = () => window.open('https://scalaitaly.typeform.com/to/MeZSjq', '_blank');
 
+  onGetTicketsClick = () => window.open('https://ti.to/scala-italy/2016', '_blank');
+
   getLocals() {
     const {
       onTwitterClick,
@@ -65,12 +67,12 @@ export default class Footer extends React.Component {
           </FlexView>
         </FlexView>
         <FlexView row width='100%'>
-          <FlexView grow className='footer-section tickets' hAlignContent='center' vAlignContent='center'>
-            <h4>Tickets will be on sale soon!</h4>
+          <FlexView column grow className='footer-section tickets' hAlignContent='center' vAlignContent='center'>
+            <h3>TICKETS</h3>
+            <Button buttonState='ready' className='action-button ticket-button' label='get your tickets' onClick={this.onGetTicketsClick} />
           </FlexView>
           <FlexView column grow hAlignContent='center' className='footer-section become-speaker'>
-            <h4>We're waiting for you!</h4>
-            Submit your proposal for a talk here!
+            <h3 style={{ textAlign: 'center' }}>We're waiting for you!</h3>
             <Button buttonState='ready' className='action-button' onClick={onBecomeSpeakerClick}>become a speaker</Button>
           </FlexView>
         </FlexView>
