@@ -1,5 +1,5 @@
 import React from 'react';
-import { pure, props, skinnable } from 'revenge';
+import { pure, props, t, skinnable } from 'revenge';
 import { FlexView, Button } from 'Basic';
 // import MailchimpForm from 'MailchimpForm/MailchimpForm';
 
@@ -8,16 +8,20 @@ import logo from 'assets/images/logo.png';
 
 @pure
 @skinnable()
-@props({ })
+@props({
+  onArrowClick: t.Function
+})
 export default class Cover extends React.Component {
 
   onGetTicketsClick = () => window.open('https://ti.to/scala-italy/2016', '_blank');
 
   getLocals() {
-    return {};
+    const { onArrowClick } = this.props;
+
+    return { onArrowClick };
   }
 
-  template() {
+  template({ onArrowClick }) {
     return (
       <FlexView className="cover-page" grow auto column hAlignContent="center" vAlignContent="center">
         <div className="logo" src={logo} />
@@ -29,7 +33,7 @@ export default class Cover extends React.Component {
           subtitle="Leave your email and we'll keep you posted"
           buttonTitle="Keep me posted"
         />*/}
-        <div className="arrow bounce" />
+        <div className="arrow bounce" onClick={onArrowClick}/>
       </FlexView>
     );
   }
