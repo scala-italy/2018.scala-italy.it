@@ -46,9 +46,11 @@ export default class Speakers extends React.Component {
           </FlexView>
         </FlexView>
         <Modal {...modalProps}>
-          {speaker && <Speaker src={speaker.pictureUrl} id={speakerId} color={speaker.color} name={speaker.name} company={speaker.company} />}
-          <FlexView className='speaker-bio'>
-            {speaker && speaker.bio}
+          <FlexView column hAlignContent='center'>
+            {speaker && <Speaker src={speaker.pictureUrl} id={speakerId} color={speaker.color} name={speaker.name} company={speaker.company} />}
+            <FlexView className='speaker-bio'>
+              {speaker && speaker.bio}
+            </FlexView>
           </FlexView>
         </Modal>
       </FlexView>

@@ -1,6 +1,6 @@
-const t = require('revenge').t;
+var t = require('revenge').t;
 
-const Config = t.struct({
+var Config = t.struct({
   NODE_ENV: t.enums.of(['development', 'production']),
   hostname: t.Str,
   port: t.Num,
@@ -18,5 +18,5 @@ const Config = t.struct({
   localStringLengthMultiplier: t.maybe(t.Num) // default: undefined (ignored, behaves as === 1)
 }, 'Config');
 
-const configJson = require('./config.json');
+var configJson = require('./config.json');
 module.exports = Config(configJson);

@@ -37,7 +37,7 @@ export default class Speaker extends React.Component {
           <div className='frame-1' style={{ borderColor: color, transition }} />
           <div className='frame-2' style={{ borderColor: color, transition }} />
           <img src={src} />
-          <div className='overlay' style={{ backgroundColor: color }} />
+          <div className='overlay' style={{ backgroundColor: dynamic ? color : 'transparent' }} />
         </div>
         <FlexView className='speaker-name' >
           {name}
