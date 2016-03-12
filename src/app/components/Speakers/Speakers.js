@@ -24,7 +24,7 @@ export default class Speakers extends React.Component {
     const modalProps = {
       isOpen: !!speakerId,
       onRequestClose: onSpeakerModalClose,
-      style: { zIndex: 100 },
+      style: { zIndex: 100 }
     };
 
     const speaker = speakers[speakerId];
