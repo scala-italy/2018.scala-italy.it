@@ -32,7 +32,7 @@ export const speakers = {
           flirted with embedded DSLs in Scala and worked on developer productivity at Google.
         </p>
         <p>
-          Ólafur blogs at <a href='geirsson.com'>geirsson.com</a>.
+          Ólafur blogs at <a href='http://geirsson.com' target='_blank'>geirsson.com</a>.
         </p>
       </div>
     )

@@ -32,3 +32,12 @@
     font-family: 'Monaco', monospace;
   }
 }
+
+.ReactModal__Overlay {
+  cursor: pointer;
+}
+
+.ReactModal__Content {
+  cursor: initial;
+  padding-top: 40px !important;
+}
