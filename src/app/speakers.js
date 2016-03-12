@@ -6,7 +6,16 @@ export const speakers = {
     company: 'Twitter',
     pictureUrl: require('assets/images/speakers/kostyukov.jpg'),
     color: '#1e9481',
-    bio: 'Foo bar'
+    bio: (
+      <div>
+        <p>
+          Vladimir started his software engineering career working on compilers and virtual machines at Intel.
+        </p>
+        <p>
+          After several years of writing C++, he decided to switch camps and joined the Finagle team at Twitter.
+        </p>
+      </div>
+    )
   },
   geirsson: {
     name: 'Ólafur Geirsson',
