@@ -4,6 +4,7 @@ import Cover from 'Cover/Cover';
 import Footer from 'Footer/Footer';
 import Conference from 'Conference/Conference';
 import Cfp from 'CFP/CFP';
+import Speakers from 'Speakers/Speakers';
 import Sponsors from 'Sponsors/Sponsors';
 import Map from 'Map/Map';
 import { FlexView } from 'Basic';
@@ -21,6 +22,7 @@ export default class LandingContainer extends React.Component {
       <FlexView column>
         <Cover />
         <Conference />
+        <Speakers />
         <Cfp />
         <Map />
         <Sponsors />

@@ -86,7 +86,7 @@ module.exports = {
       test: paths.THEME_FONTS,
       loader: 'file?name=[path][name].[ext]&context=' + paths.THEME
     }, {
-      test: /\.png$/,
+      test: /\.png|\.jpg$/,
       loader: 'file?name=[path][name].[ext]'
     }, {
       test: paths.THEME_VARIABLES,

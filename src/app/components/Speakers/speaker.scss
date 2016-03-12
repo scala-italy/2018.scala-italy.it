@@ -1,0 +1,73 @@
+.speaker {
+  cursor: pointer;
+
+  .image-container {
+    position: relative;
+    width: 214px;
+    height: 214px;
+  }
+
+  .speaker-name {
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 30px;
+    font-size: 22px;
+    color: #222222;
+  }
+
+  .speaker-company {
+    font-family: 'Monaco', monospace;
+    font-size: 14px;
+    color: #222222;
+  }
+
+  .frame-1 {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    border: 2px solid;
+    height: 100%;
+    width: 100%;
+    transition: top 0.3s linear, left 0.3s;
+  }
+
+  .frame-2 {
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    border: 2px solid;
+    height: 100%;
+    width: 100%;
+    transition: bottom 0.3s linear, right 0.3s;
+  }
+
+  img {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+  }
+
+  .overlay {
+    position: absolute;
+    opacity: 0.5;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    transition: opacity 0.3s linear;
+  }
+
+  &:hover {
+    .frame-1 {
+      top: -20px;
+      left: -20px;
+    }
+    .frame-2 {
+      bottom: -20px;
+      right: -20px;
+    }
+    .overlay {
+      opacity: 0;
+    }
+  }
+
+}
