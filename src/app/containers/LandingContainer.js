@@ -17,12 +17,24 @@ import { FlexView } from 'Basic';
 })
 export default class LandingContainer extends React.Component {
 
+  static contextTypes = {
+    router: t.Object
+  };
+
+  onSpeakerClick = name => this.context.router.push(`/speakers/${name}`);
+
+  onSpeakerModalClose = () => this.context.router.push(`/`);
+
   render() {
     return (
       <FlexView column>
         <Cover />
         <Conference />
-        <Speakers />
+        <Speakers
+          speakerId={this.props.params.speakerName}
+          onSpeakerClick={this.onSpeakerClick}
+          onSpeakerModalClose={this.onSpeakerModalClose}
+        />
         <Cfp />
         <Map />
         <Sponsors />

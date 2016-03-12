@@ -1,5 +1,7 @@
 .speaker {
-  cursor: pointer;
+  &.dynamic {
+    cursor: pointer;
+  }
 
   .image-container {
     position: relative;
@@ -42,7 +44,6 @@
 
   img {
     position: absolute;
-    z-index: 1;
     height: 100%;
     width: 100%;
   }
@@ -50,13 +51,12 @@
   .overlay {
     position: absolute;
     opacity: 0.5;
-    z-index: 2;
     height: 100%;
     width: 100%;
     transition: opacity 0.3s linear;
   }
 
-  &:hover {
+  &:hover.dynamic {
     .frame-1 {
       top: -20px;
       left: -20px;

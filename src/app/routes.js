@@ -4,7 +4,7 @@ import App from 'AppContainer';
 import Landing from 'LandingContainer';
 
 export default (
-  <Route path='/' component={App} handler={App}>
+  <Route path='/(speakers/:speakerName)' component={App} handler={App}>
     <IndexRoute component={Landing} handler={Landing} />
   </Route>
 );

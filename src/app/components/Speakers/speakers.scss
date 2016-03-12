@@ -2,6 +2,7 @@
   background-color: #f7f7f7;
   padding: 60px;
   padding-top: 0;
+  padding-bottom: 35px;
   position: relative;
 
   .section-name.right {
@@ -13,8 +14,21 @@
   }
 
   .speaker {
+    margin-bottom: 25px;
     margin-left: 60px;
     margin-right: 60px;
   }
 
+}
+
+.speaker-bio {
+  margin-top: 30px;
+
+  font-size: 14px;
+  font-family: 'Monaco', monospace;
+
+  p {
+    font-size: 14px;
+    font-family: 'Monaco', monospace;
+  }
 }
