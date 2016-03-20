@@ -18,12 +18,8 @@
       border-bottom: 2px solid $charcoalGrey;
     }
 
-    &.partners {
-      border-bottom: 2px solid $charcoalGrey;
-    }
-
     &.tickets {
-      border-right: 2px solid $charcoalGrey;
+      border-bottom: 2px solid $charcoalGrey;
     }
 
   }
@@ -36,7 +32,7 @@
         margin: 10px;
 
         @media only screen and (max-width: 500px) {
-          max-width: 100% !important;
+          max-width: 120px !important;
         }
       }
     }

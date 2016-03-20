@@ -13,6 +13,7 @@ import './speaker.scss';
   id: t.String,
   name: t.String,
   company: t.String,
+  twitter: t.maybe(t.String),
   onClick: t.maybe(t.Function)
 })
 export default class Speaker extends React.Component {
@@ -22,12 +23,12 @@ export default class Speaker extends React.Component {
   getLocals() {
     const {
       onClick,
-      props: { src, color, name, company }
+      props: { src, color, name, company, twitter }
     } = this;
 
     const dynamic = !!this.props.onClick;
 
-    return { src, color: color || 'transparent', name, company, onClick, dynamic };
+    return { src, color: color || 'transparent', name, company, onClick, dynamic, twitter };
   }
 
   template({ src, color, name, company, onClick, cursor, transition, dynamic }) {
@@ -45,6 +46,11 @@ export default class Speaker extends React.Component {
         <FlexView className='speaker-company'>
           {company}
         </FlexView>
+        {/*{twitter && <FlexView className='speaker-twitter'>
+          <a href={`https://twitter.com/${twitter}`}>
+            {`@${twitter}`}
+          </a>
+        </FlexView>}*/}
       </FlexView>
     );
   }

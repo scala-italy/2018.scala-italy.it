@@ -41,13 +41,13 @@ export default class Speakers extends React.Component {
           <h3>SPEAKERS</h3>
           <FlexView hAlignContent='center' wrap>
             {Object.keys(speakers).map(id => ({ ...speakers[id], id })).map(s => (
-              <Speaker src={s.pictureUrl} color={s.color} id={s.id} name={s.name} company={s.company} onClick={onSpeakerClick} />
+              <Speaker src={s.pictureUrl} color={s.color} id={s.id} name={s.name} company={s.company} twitter={s.twitter} onClick={onSpeakerClick} />
             ))}
           </FlexView>
         </FlexView>
         <Modal {...modalProps}>
           <FlexView column hAlignContent='center'>
-            {speaker && <Speaker src={speaker.pictureUrl} id={speakerId} color={speaker.color} name={speaker.name} company={speaker.company} />}
+            {speaker && <Speaker src={speaker.pictureUrl} id={speakerId} color={speaker.color} name={speaker.name} company={speaker.company} twitter={speaker.twitter}/>}
             <FlexView className='speaker-bio'>
               {speaker && speaker.bio}
             </FlexView>

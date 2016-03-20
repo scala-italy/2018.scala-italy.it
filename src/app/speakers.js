@@ -6,6 +6,7 @@ export const speakers = {
     company: 'Twitter',
     pictureUrl: require('assets/images/speakers/kostyukov.jpg'),
     color: '#1e9481',
+    twitter: 'vkostyukov',
     bio: (
       <div>
         <p>
@@ -22,6 +23,7 @@ export const speakers = {
     company: 'EPFL',
     pictureUrl: require('assets/images/speakers/geirsson.jpg'),
     color: '#b3810d',
+    twitter: 'olafurpg',
     bio: (
       <div>
         <p>
