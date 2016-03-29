@@ -46,11 +46,6 @@ export default class Speaker extends React.Component {
         <FlexView className='speaker-company'>
           {company}
         </FlexView>
-        {/*{twitter && <FlexView className='speaker-twitter'>
-          <a href={`https://twitter.com/${twitter}`}>
-            {`@${twitter}`}
-          </a>
-        </FlexView>}*/}
       </FlexView>
     );
   }

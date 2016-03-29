@@ -38,5 +38,31 @@ export const speakers = {
         </p>
       </div>
     )
+  },
+  allen: {
+    name: 'Jamie Allen',
+    company: 'Lightbend',
+    pictureUrl: require('assets/images/speakers/allen.jpg'),
+    color: '#799100',
+    bio: (
+      <div>
+        <p>
+          Jamie Allen is the Senior Director of Strategic Enablement Services for Typesafe, responsible for the enablement of customers around the world through consulting and training.
+        </p>
+        <p>
+          He is the author of Effective Akka (O’Reilly), and the co-author of the upcoming Reactive Design Patterns (Manning).
+        </p>
+        <p>
+          Jamie is a computer languages enthusiast who enjoys writing performant code that most efficiently leverages the resources at hand.
+        </p>
+      </div>
+    )
+  },
+  delafargue: {
+    name: 'Clement Delafargue',
+    company: 'Clever Cloud',
+    pictureUrl: require('assets/images/speakers/delafargue.jpg'),
+    color: '#C31048',
+    bio: <div>CTO @ Clever Cloud. Functional Programmer</div>
   }
 };
