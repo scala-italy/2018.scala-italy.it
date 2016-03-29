@@ -8,8 +8,10 @@ import buildo from 'assets/images/buildo.png';
 import databiz from 'assets/images/databiz_white.png';
 import sugMilano from 'assets/images/sug-milano.png';
 import sugTreviso from 'assets/images/sug-lagoon.jpg';
+import sugTorino from 'assets/images/sug-torino.jpg';
 import jugRoma from 'assets/images/jug-roma.jpg';
 import jugPadova from 'assets/images/jug-padova.jpg';
+import jugMilano from 'assets/images/jug-milano.png';
 import programmersPadua from 'assets/images/pip.png';
 
 @pure
@@ -72,8 +74,10 @@ export default class Footer extends React.Component {
               <a href='http://buildo.io' target='_blank'><img src={buildo} /></a>
               <a href='http://www.meetup.com/milano-scala-group/' target='_blank'><img src={sugMilano} /></a>
               <a href='http://www.meetup.com/it-IT/Scala-by-the-Lagoon/' target='_blank'><img src={sugTreviso} /></a>
+              <a href='http://www.meetup.com/it-IT/Torino-Scala-Programming-Big-Data-Meetup/' target='_blank'><img src={sugTorino} /></a>
               <a href='https://groups.yahoo.com/neo/groups/jug-roma/info' target='_blank'><img src={jugRoma} /></a>
               <a href='http://www.jugpadova.it/' target='_blank'><img src={jugPadova} /></a>
+              <a href='http://www.jugmilano.it/' target='_blank'><img src={jugMilano} /></a>
               <a href='https://www.facebook.com/groups/programmersinpadua/' target='_blank'><img src={programmersPadua} /></a>
             </FlexView>
           </FlexView>
