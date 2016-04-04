@@ -78,7 +78,7 @@ export default class Footer extends React.Component {
               <a href='https://groups.yahoo.com/neo/groups/jug-roma/info' target='_blank'><img src={jugRoma} /></a>
               <a href='http://www.jugpadova.it/' target='_blank'><img src={jugPadova} /></a>
               <a href='http://www.jugmilano.it/' target='_blank'><img src={jugMilano} /></a>
-              <a href='https://www.facebook.com/groups/programmersinpadua/' target='_blank'><img src={programmersPadua} /></a>
+              <a href='http://programmersinpadua.github.io' target='_blank'><img src={programmersPadua} /></a>
             </FlexView>
           </FlexView>
         </FlexView>
