@@ -3,7 +3,6 @@ import { t, props, pure } from 'revenge';
 import Cover from 'Cover/Cover';
 import Footer from 'Footer/Footer';
 import Conference from 'Conference/Conference';
-import Cfp from 'CFP/CFP';
 import Speakers from 'Speakers/Speakers';
 import Sponsors from 'Sponsors/Sponsors';
 import Map from 'Map/Map';
@@ -39,7 +38,6 @@ export default class LandingContainer extends React.Component {
           onSpeakerClick={this.onSpeakerClick}
           onSpeakerModalClose={this.onSpeakerModalClose}
         />
-        <Cfp />
         <Map />
         <Sponsors />
         <Footer />
