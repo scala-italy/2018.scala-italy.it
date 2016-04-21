@@ -32,6 +32,7 @@ export default class Sponsors extends React.Component {
           <FlexView>
             <a href='http://databiz.it' target='_blank'><img src={databiz} /></a>
           </FlexView>
+          <FlexView height={50} />
           <h4>Silver</h4>
           <FlexView>
             <a href='http://www.eng.it' target='_blank'><img src={engineering} /></a>
