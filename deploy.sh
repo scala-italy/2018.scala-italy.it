@@ -1,3 +1,5 @@
+set -e
+
 case $1 in
   prod) PREFIX=''
     ;;
@@ -7,6 +9,8 @@ esac
 
 BUCKET_URL="s3://$PREFIX"
 BUCKET_URL+="2016.scala-italy.it"
+
+npm run build
 
 # upload everything but gzipped files
 aws s3 sync build $BUCKET_URL --delete --acl public-read --region eu-central-1 --exclude "*.gz"
