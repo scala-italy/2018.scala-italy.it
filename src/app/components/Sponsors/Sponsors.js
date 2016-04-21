@@ -4,6 +4,7 @@ import { Button, FlexView } from 'Basic';
 
 import './sponsors.scss';
 import databiz from 'assets/images/databiz.png';
+import engineering from 'assets/images/engineering.jpg';
 
 @pure
 @skinnable()
@@ -30,6 +31,10 @@ export default class Sponsors extends React.Component {
           <h4>Platinum</h4>
           <FlexView>
             <a href='http://databiz.it' target='_blank'><img src={databiz} /></a>
+          </FlexView>
+          <h4>Silver</h4>
+          <FlexView>
+            <a href='http://www.eng.it' target='_blank'><img src={engineering} /></a>
           </FlexView>
         </FlexView>
         <FlexView basis={50} />
