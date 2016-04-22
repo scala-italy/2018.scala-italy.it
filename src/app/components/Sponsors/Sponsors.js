@@ -5,6 +5,7 @@ import { Button, FlexView } from 'Basic';
 import './sponsors.scss';
 import databiz from 'assets/images/databiz.png';
 import engineering from 'assets/images/engineering.jpg';
+import unicredit from 'assets/images/unicredit.jpg';
 
 @pure
 @skinnable()
@@ -36,6 +37,8 @@ export default class Sponsors extends React.Component {
           <h4>Silver</h4>
           <FlexView>
             <a href='http://www.eng.it' target='_blank'><img src={engineering} /></a>
+            <FlexView width={50} />
+            <a href='https://www.unicreditgroup.eu' target='_blank'><img src={unicredit} /></a>
           </FlexView>
         </FlexView>
         <FlexView basis={50} />
