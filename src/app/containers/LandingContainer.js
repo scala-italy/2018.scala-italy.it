@@ -4,6 +4,7 @@ import Cover from 'Cover/Cover';
 import Footer from 'Footer/Footer';
 import Conference from 'Conference/Conference';
 import Speakers from 'Speakers/Speakers';
+import Schedule from 'Schedule/Schedule';
 import Sponsors from 'Sponsors/Sponsors';
 import Map from 'Map/Map';
 import { FlexView } from 'Basic';
@@ -38,6 +39,7 @@ export default class LandingContainer extends React.Component {
           onSpeakerClick={this.onSpeakerClick}
           onSpeakerModalClose={this.onSpeakerModalClose}
         />
+        <Schedule />
         <Map />
         <Sponsors />
         <Footer />

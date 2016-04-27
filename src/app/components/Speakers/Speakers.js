@@ -37,7 +37,7 @@ export default class Speakers extends React.Component {
       <FlexView className='speakers' hAlignContent='center'>
         <div className='section-name left'>Speakers</div>
         <div className='section-name right'>Speakers</div>
-        <FlexView column style={{ maxWidth: 900 }} hAlignContent='center'>
+        <FlexView column hAlignContent='center'>
           <h3>SPEAKERS</h3>
           <FlexView hAlignContent='center' wrap>
             {Object.keys(speakers).map(id => ({ ...speakers[id], id })).map(s => (

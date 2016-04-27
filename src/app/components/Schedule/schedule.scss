@@ -1,0 +1,69 @@
+.schedule {
+
+  padding-top: 20px;
+  padding-bottom: 50px;
+
+  .section-name.right {
+    right: -38px;
+  }
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  h3 {
+    margin-bottom: 40px;
+  }
+
+  table {
+    max-width: 85%;
+    border-collapse: separate;
+    border-spacing: 8px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  td, th {
+    border: none;
+    text-align: center;
+    height: 62px;
+    padding-right: 8px;
+    padding-left: 8px;
+  }
+
+  .talk {
+    background-color: #f0f0f0;
+    div:nth-child(1) {
+      font-size: 16px;
+    }
+    div:nth-child(2) {
+      font-size: 15px;
+      font-family: 'OpenSans', sans-serif;
+      color: rgba(0, 27, 35, 0.6);
+    }
+  }
+
+  .track-a-title {
+    color: #ff0037;
+  }
+
+  .track-b-title {
+    color: #c18f00;
+  }
+
+  .track-a:hover {
+    background-color: #ff0037;
+    color: white;
+    div:nth-child(1), div:nth-child(2) {
+      color: white;
+    }
+  }
+
+  .track-b:hover {
+    background-color: #c18f00;
+    color: white;
+    div:nth-child(1), div:nth-child(2) {
+      color: white;
+    }
+  }
+}
