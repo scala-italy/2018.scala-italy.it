@@ -175,6 +175,20 @@ export const speakers = {
       </div>
     )
   },
+  ranieri: {
+    name: 'Cosimo Ranieri',
+    company: 'Shutl',
+    pictureUrl: require('assets/images/speakers/ranieri.jpg'),
+    color: '#1e9481',
+    bio: (
+      <div>
+        <p>I'm a software engineer at Shutl, an eBay company.</p>
+        <p>I fell in love with functional programming, and never stopped writing software with Scala since then.</p>
+        <p>I'm an eager learner and always seeking new ways to write better, more readable and reliable software.</p>
+        <p>When I'm not in front of a computer, you can find me playing football in some London parks.</p>
+      </div>
+    )
+  }/*,
   kostyukov: {
     name: 'Vladimir Kostyukov',
     company: 'Twitter',
@@ -191,6 +205,6 @@ export const speakers = {
         </p>
       </div>
     )
-  }
+  }*/
 
 };
