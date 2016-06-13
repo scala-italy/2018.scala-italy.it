@@ -23,7 +23,8 @@
 
 }
 
-.speaker-bio {
+.speaker-bio, .abstract {
+  max-width: 500px;
   margin-top: 30px;
 
   font-size: 14px;

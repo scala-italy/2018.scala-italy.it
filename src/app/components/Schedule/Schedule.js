@@ -31,7 +31,7 @@ export default class Schedule extends React.Component {
             </td>
           </tr>
           <tr>
-            <td className='time'>10:00 - 10:45</td>
+            <td className='time'>10:00 - 10:55</td>
             <td colSpan={2} className='talk track-a'>
               <a href='#/speakers/allen'>
                 <div>Jamie Allen</div>
@@ -40,7 +40,13 @@ export default class Schedule extends React.Component {
             </td>
           </tr>
           <tr>
-            <td className='time'>10:50 - 11:35</td>
+            <td />
+            <td colSpan='2' style={{ textAlign: 'center' }}>
+              BREAK
+            </td>
+          </tr>
+          <tr>
+            <td className='time'>11:10 - 11:55</td>
             <td colSpan={2} className='talk track-a'>
               <a href='#/speakers/delafargue'>
                 <div>Clement Delafargue</div>
@@ -49,7 +55,7 @@ export default class Schedule extends React.Component {
             </td>
           </tr>
           <tr>
-            <td className='time'>11:40 - 12:25</td>
+            <td className='time'>12:00 - 12:45</td>
             <td colSpan={2} className='talk track-a'>
               <a href='#/speakers/geirsson'>
                 <div>Olafur Geirsson</div>
@@ -111,17 +117,20 @@ export default class Schedule extends React.Component {
                 <div>Andrea Bessi / Emanuele Bezzi</div>
                 <div>Deep Learning with Apache Spark: an Introduction</div>
               </a>
-            </td>
-            <td className='talk track-b'>
-              <div>T.B.A.</div>
+              <td className='talk track-b'>
+                <a href='#/speakers/vacchi'>
+                  <div>Edoardo Vacchi</div>
+                  <div>Be Like Water — A Shapeless Primer</div>
+                </a>
+              </td>
             </td>
           </tr>
           <tr>
             <td className='time'>16:40 - 17:25</td>
             <td className='talk track-a'>
-              <a href='#/speakers/vacchi'>
-                <div>Edoardo Vacchi</div>
-                <div>Be Like Water — A Shapeless Primer</div>
+              <a href='#/speakers/petronella'>
+                <div>Gabriele Petronella</div>
+                <div>Monad Transformers: just, why?</div>
               </a>
             </td>
             <td className='talk track-b'>

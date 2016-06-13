@@ -51,6 +51,10 @@ export default class Speakers extends React.Component {
             <FlexView className='speaker-bio'>
               {speaker && speaker.bio}
             </FlexView>
+            <h3>THE TALK</h3>
+            <FlexView className='abstract'>
+              {speaker && speaker.abstract}
+            </FlexView>
           </FlexView>
         </Modal>
       </FlexView>

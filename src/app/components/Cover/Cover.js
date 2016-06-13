@@ -13,7 +13,7 @@ import logo from 'assets/images/logo.png';
 })
 export default class Cover extends React.Component {
 
-  onGetTicketsClick = () => window.open('https://ti.to/scala-italy/2016', '_blank');
+  onWatchVideosClick = () => window.open('https://vimeo.com/channels/scalaitaly2016');
 
   getLocals() {
     const { onArrowClick } = this.props;
@@ -27,12 +27,7 @@ export default class Cover extends React.Component {
         <div className="logo" src={logo} />
         <h1>The only Italian conference on Scala</h1>
         <h3>Venice, May 14th, 2016</h3>
-        <Button buttonState='ready' className='action-button ticket-button' label='get your tickets' onClick={this.onGetTicketsClick} />
-        {/*<MailchimpForm
-          title="Interested?"
-          subtitle="Leave your email and we'll keep you posted"
-          buttonTitle="Keep me posted"
-        />*/}
+        <Button buttonState='ready' className='action-button video-button' label='watch the videos' onClick={this.onWatchVideosClick} />
         <div className="arrow bounce" onClick={onArrowClick}/>
       </FlexView>
     );
