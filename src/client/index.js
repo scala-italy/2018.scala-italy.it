@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import config from '../../config';
-import { CookieSerializer, t } from 'revenge';
+import { t } from 'tcomb-react';
 import { createRoutes, browserHistory, hashHistory, Router, RouterContext } from 'react-router';
 import API from 'HTTPAPI';
 import DB from 'DB';
@@ -42,15 +42,7 @@ function renderApp(mountNode: HTMLElement, _initialData: ?Object, data = {}) {
 
   return function renderAppWithLocale(intlData) {
 
-    const initialData = _initialData ? _initialData : DB.getDefaultData(
-      CookieSerializer.deserialize()
-    );
-
-    const db = new DB(initialData);
-    const app = main.app = new App({ // eslint-disable-line no-use-before-define
-      API, db, data,
-      remote: config.remote ? '/__remote' : false
-    });
+    const app = main.app = new App();
 
     // don't fetch data during the first rendering
     // if currently running on iso setup
@@ -72,7 +64,7 @@ function renderApp(mountNode: HTMLElement, _initialData: ?Object, data = {}) {
         render={(props) => {
           const { params, routes, location: { query } } = props;
           if (doFetch) {
-            app.fetch(routes, app.getState({ params, query }));
+            // app.fetch(routes, app.getState({ params, query }));
           } else {
             doFetch = true;
           }

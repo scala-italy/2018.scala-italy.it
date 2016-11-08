@@ -1,4 +1,4 @@
-var t = require('revenge').t;
+var t = require('tcomb');
 
 var Config = t.struct({
   NODE_ENV: t.enums.of(['development', 'production']),

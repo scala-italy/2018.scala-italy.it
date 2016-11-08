@@ -1,5 +1,6 @@
 import React from 'react';
-import { t, props, pure } from 'revenge';
+import { t, props } from 'tcomb-react';
+import { pure } from 'revenge';
 import Cover from 'Cover/Cover';
 import Footer from 'Footer/Footer';
 import Conference from 'Conference/Conference';
@@ -27,7 +28,7 @@ export default class LandingContainer extends React.Component {
 
   onSpeakerClick = name => this.context.router.push(`/speakers/${name}`);
 
-  onSpeakerModalClose = () => this.context.router.push(`/`);
+  onSpeakerModalClose = () => this.context.router.push('/');
 
   render() {
     return (
@@ -53,8 +54,8 @@ window.bringIntoView_started = 0;
 window.bringIntoView_ends = 0;
 window.bringIntoView_y = 0;
 window.bringIntoView_tick = function() {
-  let distanceLeft, dt, duration, t, travel;
-  t = Date.now();
+  let distanceLeft, dt, duration, travel;
+  const t = Date.now();
   if (t < window.bringIntoView_ends) {
     dt = t - window.bringIntoView_started;
     duration = window.bringIntoView_ends - window.bringIntoView_started;

@@ -1,5 +1,6 @@
 import React from 'react';
-import { props, pure, skinnable } from 'revenge';
+import { props } from 'tcomb-react';
+import { pure, skinnable } from 'revenge';
 import { Button, FlexView } from 'Basic';
 
 import './sponsors.scss';

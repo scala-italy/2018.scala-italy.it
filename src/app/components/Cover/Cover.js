@@ -1,5 +1,6 @@
 import React from 'react';
-import { pure, props, t, skinnable } from 'revenge';
+import { t, props } from 'tcomb-react';
+import { pure, skinnable } from 'revenge';
 import { FlexView, Button } from 'Basic';
 // import MailchimpForm from 'MailchimpForm/MailchimpForm';
 
@@ -23,12 +24,12 @@ export default class Cover extends React.Component {
 
   template({ onArrowClick }) {
     return (
-      <FlexView className="cover-page" grow auto column hAlignContent="center" vAlignContent="center">
-        <div className="logo" src={logo} />
+      <FlexView className='cover-page' grow auto column hAlignContent='center' vAlignContent='center'>
+        <div className='logo' src={logo} />
         <h1>The only Italian conference on Scala</h1>
         <h3>Venice, May 14th, 2016</h3>
         <Button buttonState='ready' className='action-button video-button' label='watch the videos' onClick={this.onWatchVideosClick} />
-        <div className="arrow bounce" onClick={onArrowClick}/>
+        <div className='arrow bounce' onClick={onArrowClick}/>
       </FlexView>
     );
   }

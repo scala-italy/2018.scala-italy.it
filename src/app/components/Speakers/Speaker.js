@@ -1,5 +1,6 @@
 import React from 'react';
-import { props, t, pure, skinnable } from 'revenge';
+import { t, props } from 'tcomb-react';
+import { pure, skinnable } from 'revenge';
 import { FlexView } from 'Basic';
 import cx from 'classnames';
 

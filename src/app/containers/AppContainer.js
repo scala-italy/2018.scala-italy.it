@@ -1,5 +1,5 @@
 import React from 'react';
-import { props, t } from 'revenge';
+import { t, props } from 'tcomb-react';
 import { intl, FlexView } from 'Basic';
 import { intlMethods } from 'intlHelpers';
 

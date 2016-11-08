@@ -1,5 +1,5 @@
 // buildo-react-components cherry-picks
-export { FlexView } from 'buildo-react-components/src/flex';
+export FlexView from 'react-flexview';
 export Button from 'buildo-react-components/src/button';
 export Icon from 'buildo-react-components/src/Icon';
 

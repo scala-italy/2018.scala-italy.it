@@ -1,5 +1,6 @@
 import React from 'react';
-import { props, pure, skinnable } from 'revenge';
+import { props } from 'tcomb-react';
+import { pure, skinnable } from 'revenge';
 import { FlexView, Button }  from 'Basic';
 
 import './footer.scss';

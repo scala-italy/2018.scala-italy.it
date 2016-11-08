@@ -1,9 +1,10 @@
 import React from 'react';
-import { pure, skinnable, props, t } from 'revenge';
+import { t, props } from 'tcomb-react';
+import { pure, skinnable } from 'revenge';
 import LoadingSpinnerBuildo from 'buildo-react-components/src/loading-spinner';
 
-import 'buildo-react-components/src/loading-spinner/style.scss';
-import colors from 'theme/variables.scss';
+import 'buildo-react-components/lib/loading-spinner/loadingSpinner.css';
+// import colors from 'theme/variables.scss';
 
 @pure
 @skinnable()
@@ -17,7 +18,7 @@ export default class LoadingSpinner extends React.Component {
 
   static defaultProps = {
     message: '',
-    overlayColor: colors.white90
+    overlayColor: '#fff'
   };
 
   getLocals() {

@@ -3,7 +3,8 @@ import GoogleMapLoader from 'react-google-maps/lib/GoogleMapLoader';
 import GoogleMap from 'react-google-maps/lib/GoogleMap';
 import InfoWindow from 'react-google-maps/lib/InfoWindow';
 import Marker from 'react-google-maps/lib/Marker';
-import { props, pure, skinnable } from 'revenge';
+import { props } from 'tcomb-react';
+import { pure, skinnable } from 'revenge';
 
 import './map.scss';
 
