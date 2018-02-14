@@ -1,0 +1,74 @@
+.footer {
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+  justify-content: center;
+  background-color: #002029;
+  color: #B7BCC5;
+  font-family: 'Monaco', 'Inconsolata', monospace; }
+  .footer h3, .footer h4 {
+    color: white;
+    margin-top: 0; }
+  .footer .footer-section {
+    padding: 30px; }
+    .footer .footer-section.social {
+      border-right: 2px solid #3c474b;
+      border-bottom: 2px solid #3c474b; }
+    .footer .footer-section.tickets {
+      border-bottom: 2px solid #3c474b; }
+  .footer .partners .partners-logos img {
+    max-width: 140px;
+    margin: 10px; }
+    @media only screen and (max-width: 500px) {
+      .footer .partners .partners-logos img {
+        max-width: 120px !important; } }
+  .footer .social {
+    color: #B7BCC5; }
+  .footer .second-row {
+    margin-top: 20px; }
+    .footer .second-row .email {
+      color: #B7BCC5;
+      font-size: 14px;
+      font-family: 'Monaco', 'Inconsolata', monospace;
+      text-decoration: underline; }
+    .footer .second-row .social-button {
+      margin: 10px;
+      max-width: 100px;
+      padding: 5px 10px;
+      border: 2px solid #B7BCC5;
+      background-color: transparent;
+      color: #B7BCC5;
+      cursor: pointer;
+      font-family: 'Monaco', 'Inconsolata', monospace;
+      font-size: 14px; }
+      @media only screen and (max-width: 500px) {
+        .footer .second-row .social-button {
+          font-size: 13px; } }
+      .footer .second-row .social-button:hover {
+        color: #383d45;
+        background-color: #d3d6dc; }
+      .footer .second-row .social-button .button-label {
+        margin-left: 4px;
+        line-height: initial; }
+  .footer .action-button {
+    max-width: 300px;
+    color: #DBDDE2;
+    font-size: 16px;
+    font-family: 'Monaco', 'Inconsolata', monospace;
+    font-weight: bold;
+    background-color: #ff0037;
+    margin-top: 30px;
+    padding: 8px 10px;
+    cursor: pointer; }
+    @media only screen and (max-width: 500px) {
+      .footer .action-button {
+        font-size: 12px; } }
+    .footer .action-button:hover {
+      background-color: #ff335f; }
+  .footer .bottom-line {
+    height: 60px;
+    background-color: #00161d;
+    display: flex;
+    flex: 1 0 auto;
+    align-items: center;
+    justify-content: center; }

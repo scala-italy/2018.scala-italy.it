@@ -1,0 +1,62 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat:400,700";
+@import "https://i.icomoon.io/public/5ba04e2a5e/ScalaItaly2016/style.css";
+@import "https://fonts.googleapis.com/css?family=Inconsolata";
+@import "theme/variables.scss";
+@import "theme/typography.scss";
+
+.app {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
+// BORDER-BOX
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+// PREVENT BOUNCE SCROLLING IN OSX
+
+html, body, {
+  height: 100%;
+}
+
+.flex-view {
+  box-sizing: border-box;
+}
+
+.section-name {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+
+
+  user-select: none;
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  transform:  translateX(-50%) translateY(-50%) rotate(90deg);
+  text-transform: uppercase;
+
+  &.left {
+    left: 20px;
+  }
+
+  &.right {
+    right: -110px;
+  }
+
+  &.light {
+    color: $oliveGreen;
+  }
+}

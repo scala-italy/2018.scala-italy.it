@@ -1,0 +1,117 @@
+@import 'theme/variables.scss';
+
+.footer {
+  display: flex;
+  flex: 1 0 auto;
+  align-items: center;
+  justify-content: center;
+
+  background-color: $navy;
+  color: $silver;
+  font-family: 'Monaco', 'Inconsolata', monospace;
+
+  h3, h4 {
+    color: $white;
+    margin-top: 0;
+  }
+
+  .footer-section {
+
+    padding: 30px;
+
+    &.social {
+      border-right: 2px solid $charcoalGrey;
+      border-bottom: 2px solid $charcoalGrey;
+    }
+
+    &.tickets {
+      border-bottom: 2px solid $charcoalGrey;
+    }
+
+  }
+
+  .partners {
+    .partners-logos {
+
+      img {
+        max-width: 140px;
+        margin: 10px;
+
+        @media only screen and (max-width: 500px) {
+          max-width: 120px !important;
+        }
+      }
+    }
+  }
+
+  .social {
+    color: $silver;
+  }
+
+  .second-row {
+    margin-top: 20px;
+
+    .email {
+      color: $silver;
+      font-size: 14px;
+      font-family: 'Monaco', 'Inconsolata', monospace;
+      text-decoration: underline;
+    }
+
+    .social-button {
+      margin: 10px;
+      max-width: 100px;
+      padding: 5px 10px;
+      border: 2px solid $silver;
+      background-color: transparent;
+      color: $silver;
+      cursor: pointer;
+      font-family: 'Monaco', 'Inconsolata', monospace;
+      font-size: 14px;
+
+      @media only screen and (max-width: 500px) {
+        font-size: 13px;
+      }
+
+      &:hover {
+        color: darken($silver, 50%);
+        background-color: lighten($silver, 10%);
+      }
+
+      .button-label {
+        margin-left: 4px;
+        line-height: initial;
+      }
+    }
+  }
+
+  .action-button {
+    max-width: 300px;
+    color: $primaryTextColor;
+    font-size: 16px;
+    font-family: 'Monaco', 'Inconsolata', monospace;
+    font-weight: bold;
+    background-color: $neonRed;
+    margin-top: 30px;
+    padding: 8px 10px;
+    cursor: pointer;
+
+    @media only screen and (max-width: 500px) {
+      font-size: 12px;
+    }
+
+    &:hover {
+      background-color: lighten($neonRed, 10%);
+    }
+  }
+
+  .bottom-line {
+    height: 60px;
+    background-color: $navyTwo;
+    display: flex;
+    flex: 1 0 auto;
+    align-items: center;
+    justify-content: center;
+  }
+
+}

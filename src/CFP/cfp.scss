@@ -1,0 +1,68 @@
+@import 'theme/variables.scss';
+
+.cfp {
+  padding: 60px;
+  position: relative;
+
+  @media only screen and (max-width: 800px) {
+    .wrapper {
+      flex-wrap: wrap;
+
+      .cfp-description {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  span.code-title {
+    font-family: 'Monaco', 'Inconsolata', monospace;
+    font-size: 33px;
+    color: $navy;
+    margin-bottom: 13px;
+
+    &:before {
+      content: 'CanSpeakAbout'
+    }
+
+    &:hover:before {
+      content: 'CanBuildFrom'
+    }
+  }
+
+  .cfp-description {
+    font-family: 'Monaco', 'Inconsolata', monospace;
+
+    h3 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 32.9px;
+    }
+
+    strong {
+      display: inline-block;
+    }
+  }
+
+  .button-inner.is-default.action-button {
+    width: 251px !important;
+    color: $primaryTextColor;
+    font-size: 18px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    height: 53px;
+    border: 3px solid $neonRed;
+    background: transparent;
+    color: $neonRed;
+    text-transform: uppercase;
+
+    &:hover {
+      background: $neonRed !important;
+      color: white;
+      cursor: pointer;
+    }
+  }
+}

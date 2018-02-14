@@ -1,0 +1,102 @@
+@import "https://fonts.googleapis.com/css?family=Montserrat:400,700";
+@import "https://i.icomoon.io/public/5ba04e2a5e/ScalaItaly2016/style.css";
+@import "https://fonts.googleapis.com/css?family=Inconsolata";
+html {
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased; }
+
+h1 {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-weight: 400;
+  line-height: 1.5; }
+
+h2 {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-weight: 400;
+  line-height: 1.5; }
+
+h3 {
+  font-family: 'Montserrat';
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 1.5; }
+
+h4 {
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 1.5; }
+
+p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.43; }
+
+strong {
+  font-weight: 700; }
+
+a {
+  cursor: pointer;
+  color: #45a7b9; }
+
+a:hover {
+  color: #45a7b9; }
+
+input {
+  height: 36px;
+  border-radius: 1px;
+  border: 1px solid #DBDDE2;
+  font-weight: 600;
+  font-size: 14px;
+  color: #3c474b;
+  box-sizing: border-box; }
+  input::-webkit-input-placeholder {
+    color: #A2A8B2; }
+  input:-moz-placeholder {
+    /* Firefox 18- */
+    color: #A2A8B2; }
+  input::-moz-placeholder {
+    /* Firefox 19*/
+    color: #A2A8B2; }
+  input:-ms-input-placeholder {
+    color: #A2A8B2; }
+
+.app {
+  flex: 1 0 auto;
+  display: flex;
+  flex-direction: column; }
+
+html {
+  box-sizing: border-box; }
+
+*, *:before, *:after {
+  box-sizing: inherit; }
+
+html, body {
+  height: 100%; }
+
+.flex-view {
+  box-sizing: border-box; }
+
+.section-name {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  font-family: 'Montserrat';
+  font-weight: normal;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%) rotate(90deg);
+  text-transform: uppercase; }
+  .section-name.left {
+    left: 20px; }
+  .section-name.right {
+    right: -110px; }
+  .section-name.light {
+    color: #637c07; }
