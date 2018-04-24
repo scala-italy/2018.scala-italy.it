@@ -2,20 +2,23 @@ import * as React from 'react';
 import Cover from './Cover/Cover';
 import Footer from './Footer/Footer';
 import CFP from './CFP/CFP';
+import Sponsors from './Sponsors/Sponsors';
+import Partners from './Partners/Partners';
 
 require('./App.css');
 
 class App extends React.Component {
   onArrowClick = () => {
-    // tslint:disable-next-line:no-string-literal
-    window['bringIntoView'](document.querySelector('.speakers'), 1000);
-  }; // tslint:disable-line
+    (window as any).bringIntoView(document.querySelector('.cfp'), 1000);
+  }
 
   render() {
     return (
       <div className="app">
         <Cover onArrowClick={this.onArrowClick} />
         <CFP />
+        <Sponsors />
+        <Partners />
         <Footer />
       </div>
     );

@@ -83,8 +83,8 @@
     }
   }
 
-  .action-button.video-button,
-  .action-button.ticket-button {
+  .button .action-button.video-button,
+  .button .action-button.ticket-button {
     margin-top: 100px;
     width: 251px !important;
     color: $primaryTextColor;
@@ -93,13 +93,13 @@
     font-weight: bold;
     height: 53px;
     border: 3px solid $neonRed;
-    background-color: transparent;
+    background: transparent;
     color: $neonRed;
     text-transform: uppercase;
     cursor: pointer;
 
     &:hover {
-      background-color: $neonRed;
+      background: $neonRed !important;
       color: white;
     }
   }

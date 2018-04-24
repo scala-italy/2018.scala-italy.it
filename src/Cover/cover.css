@@ -59,8 +59,8 @@
       font-family: 'Montserrat';
       font-weight: normal;
       color: #85979a; }
-  .cover-page .action-button.video-button,
-  .cover-page .action-button.ticket-button {
+  .cover-page .button .action-button.video-button,
+  .cover-page .button .action-button.ticket-button {
     margin-top: 100px;
     width: 251px !important;
     color: #DBDDE2;
@@ -69,13 +69,13 @@
     font-weight: bold;
     height: 53px;
     border: 3px solid #ff0037;
-    background-color: transparent;
+    background: transparent;
     color: #ff0037;
     text-transform: uppercase;
     cursor: pointer; }
-    .cover-page .action-button.video-button:hover,
-    .cover-page .action-button.ticket-button:hover {
-      background-color: #ff0037;
+    .cover-page .button .action-button.video-button:hover,
+    .cover-page .button .action-button.ticket-button:hover {
+      background: #ff0037 !important;
       color: white; }
   .cover-page .arrow {
     cursor: pointer;

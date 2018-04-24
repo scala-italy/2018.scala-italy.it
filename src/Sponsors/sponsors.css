@@ -1,0 +1,29 @@
+.sponsors-section {
+  padding: 60px;
+  position: relative;
+  flex-wrap: wrap; }
+  .sponsors-section h2, .sponsors-section h3, .sponsors-section h4 {
+    margin-top: 0; }
+  .sponsors-section h4 {
+    font-family: 'Monaco', 'Inconsolata', monospace;
+    text-transform: uppercase; }
+  .sponsors-section .section-name.right {
+    right: -45px; }
+  .sponsors-section .button .button-inner.is-default.action-button {
+    width: 251px !important;
+    color: #DBDDE2;
+    font-size: 18px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    height: 53px;
+    border: 3px solid #ff0037;
+    background-color: transparent;
+    color: #ff0037;
+    text-transform: uppercase; }
+    .sponsors-section .button .button-inner.is-default.action-button:hover {
+      background: #ff0037 !important;
+      color: white;
+      cursor: pointer; }
+  .sponsors-section img {
+    height: 100px;
+    margin-top: 30px; }

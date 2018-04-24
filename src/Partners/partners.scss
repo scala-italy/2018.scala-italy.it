@@ -1,0 +1,43 @@
+@import 'theme/variables.scss';
+
+.partners-section {
+  padding: 60px;
+  position: relative;
+
+  h2, h3, h4 {
+    margin-top: 0;
+  }
+
+  h4 {
+    font-family: 'Monaco', 'Inconsolata', monospace;
+    text-transform: uppercase;
+  }
+
+  .section-name.right {
+    right: -45px;
+  }
+
+  .button .button-inner.is-default.action-button {
+    width: 251px !important;
+    color: $primaryTextColor;
+    font-size: 18px;
+    font-family: 'Montserrat';
+    font-weight: bold;
+    height: 53px;
+    border: 3px solid $neonRed;
+    background-color: transparent;
+    color: $neonRed;
+    text-transform: uppercase;
+
+    &:hover {
+      background: $neonRed !important;
+      color: white;
+      cursor: pointer;
+    }
+  }
+
+  img {
+    height: 80px;
+  }
+
+}

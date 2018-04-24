@@ -23,7 +23,7 @@
         "jsx-no-multiline-js": false,
         "label-position": true,
         "max-line-length": [ true, 120 ],
-        "no-any": true,
+        "no-any": false,
         "no-arg": true,
         "no-bitwise": true,
         "no-console": [
