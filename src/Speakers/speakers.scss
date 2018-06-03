@@ -1,0 +1,65 @@
+@import 'theme/variables.scss';
+
+.speakers {
+  background-color: #f7f7f7;
+  padding: 60px;
+  padding-top: 0;
+  padding-bottom: 35px;
+  position: relative;
+
+  .section-name.right {
+    right: -38px;
+  }
+
+  h3 {
+    margin-bottom: 40px;
+  }
+
+  .speaker {
+    margin-bottom: 25px;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+
+}
+
+.speaker-bio, .abstract {
+  margin-top: 30px;
+}
+
+.speaker-bio, .abstract, .title {
+  max-width: 500px;
+
+  font-size: 14px;
+  font-family: 'Monaco', monospace;
+
+  p {
+    font-size: 14px;
+    font-family: 'Monaco', monospace;
+  }
+}
+
+.title {
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.co-speaker {
+  margin-top: 4px;
+  font-size: 13px;
+  font-family: 'Monaco', monospace;
+}
+
+.ReactModal__Overlay {
+  cursor: pointer;
+  background-color: transparentize($navy, 0.1) !important;
+}
+
+.ReactModal__Content {
+  cursor: initial;
+  padding-top: 40px !important;
+  @media (min-width: 1000px) {
+    left: 20% !important;
+    right: 20% !important;
+  }
+}
