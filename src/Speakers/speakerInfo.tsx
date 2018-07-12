@@ -69,47 +69,34 @@ export const speakers = {
       </div>
     )
   },
-  seeberger: {
-    name: 'Heiko Seeberger',
-    company: '',
-    title: 'Farewell Any => Unit, welcome Akka Typed!',
-    pictureUrl: require('../assets/speakers/seeberger.jpg'),
+  sabin: {
+    name: 'Miles Sabin',
+    company: 'Underscore',
+    title: 'Adding kind-polymorphism to the Scala programming language',
+    pictureUrl: require('../assets/speakers/sabin.jpg'),
     color: palette.purple,
     abstract: (
       <div>
         <p>
-          You know Akka? Then you certainly also know about its current main weakness: actors are
-          untyped. But with Akka Typed this is going to change!
+          What sort of primitive mechanisms should we choose to support shapeless-style generic
+          programming directly in Scala? I say Kind-polymorphism!
         </p>
         <p>
-          In this talk we introduce its API, discuss differences between the “old and new” world and
-          show options for migration and integration.
+          I will demonstrate this in the Typelevel compiler and show how it can be used to
+          dramatically simplify generic programming in Scala.
         </p>
       </div>
     ),
     bio: (
       <div>
         <p>
-          Heiko Seeberger loves rock climbing and is an internationally renowned expert on Scala,
-          Akka and Functional Programming.
+          Miles has been doing stuff with Scala for more than a decade, currently with Underscore
+          Consulting.{' '}
         </p>
         <p>
-          He has more than twenty years of experience in software engineering, consulting and
-          training and is an active open source contributor.
-        </p>
-        <p>
-          Heiko works as an independent consultant and regularly shares his knowledge at conferences
-          and user group meetings.
-        </p>
-        <p>
-          He tweets under{' '}
-          <a href="https://twitter.com/@hseeberger" target="_blank">
-            @hseeberger
-          </a>{' '}
-          and blogs under{' '}
-          <a href="https://heikoseeberger.rocks" target="_blank">
-            heikoseeberger.rocks
-          </a>.
+          He is a cofounder of Typelevel and his best known project, the Scala generic programming
+          library shapeless, is the weapon of choice wherever boilerplate needs to be scrapped or
+          arities abstracted over.
         </p>
       </div>
     )

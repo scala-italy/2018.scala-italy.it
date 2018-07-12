@@ -1,7 +1,6 @@
 import * as React from 'react';
 import Cover from './Cover/Cover';
 import Footer from './Footer/Footer';
-import CFP from './CFP/CFP';
 import Speakers from './Speakers/Speakers';
 import Sponsors from './Sponsors/Sponsors';
 import Partners from './Partners/Partners';
@@ -41,7 +40,6 @@ class App extends React.Component<{}, State> {
     return (
       <div className="app">
         <Cover onArrowClick={this.onArrowClick} />
-        <CFP />
         <Speakers
           speakerId={speakerId}
           onSpeakerClick={this.onSpeakerClick}
