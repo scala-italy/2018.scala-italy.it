@@ -4,6 +4,7 @@ import Footer from './Footer/Footer';
 import Speakers from './Speakers/Speakers';
 import Sponsors from './Sponsors/Sponsors';
 import Partners from './Partners/Partners';
+import Venue from './Venue/Venue';
 
 require('./App.css');
 
@@ -47,6 +48,7 @@ class App extends React.Component<{}, State> {
         />
         <Sponsors />
         <Partners />
+        <Venue />
         <Footer />
       </div>
     );
