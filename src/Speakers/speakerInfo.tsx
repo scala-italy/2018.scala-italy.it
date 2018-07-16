@@ -100,5 +100,60 @@ export const speakers = {
         </p>
       </div>
     )
+  },
+  rzeznicki: {
+    name: 'Marcin Rzeźnicki',
+    company: 'Iterators',
+    title: 'Idris for (im)practical Scala programmers',
+    pictureUrl: require('../assets/speakers/rzeznicki.png'),
+    color: palette.green,
+    abstract: (
+      <div>
+        <p>
+          If you want to know how to achieve this:
+          <pre>
+            <code>scala> val v = 1 :: 2 :: NIL</code>
+          </pre>
+          <pre>
+            <code>scala> v.tail.tail.head</code>
+          </pre>
+          <pre>
+            <code>:13: error:</code>
+          </pre>
+          in Scala, or how to make type of <code>printf "%s = %d"</code> to be precisely{' '}
+          <code>String -> Int -> String</code>, come to my talk (I'll also show when it won't work)
+        </p>
+      </div>
+    ),
+    bio: (
+      <div>
+        <p>
+          I'm a senior software engineer at Iterators, disguised under a self-proclaimed title of
+          Scala Tiger (or Scala Kitten), sometimes also known as Scala Animal.
+        </p>
+        <p>
+          I have been in this business for ca. 10 years, mostly filled with immense displeasure of
+          working in C#, Java or Ruby until I witnessed the advent of FP in the industry and
+          regained the knowledge I'd lost leaving academia halls.
+        </p>
+        <p>
+          Embracing Scala helped me to become born-again programmer, type system theorist and
+          category theory hobbyist.
+        </p>
+        <p>
+          I gave talks at Krakow Scala User Group, Chamberconf, Scalapolis, ScalaWAW, Lambda Days,
+          Scala UA on subjects like: Kleisli arrows, category theory and Free monads. My coworkers
+          wrote about me: "Don't let Marcin start talking about type systems… He is an expert using
+          Scala to build most composable and concise business logic for our partners. " but I find
+          it to be unfounded hype.
+        </p>
+        <p>
+          I'm also the main author of open-source library called kebs:{' '}
+          <a href="https://github.com/theiterators/kebs" target="blank">
+            https://github.com/theiterators/kebs
+          </a>
+        </p>
+      </div>
+    )
   }
 };
