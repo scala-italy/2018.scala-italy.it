@@ -7,6 +7,7 @@ import * as bitrock from './bitrock.png';
 import * as unicredit from './unicredit.jpg';
 import * as lightbend from './lightbend.png';
 import * as signify from './signify.png';
+import * as warda from './warda.png';
 
 export default class Sponsors extends React.PureComponent {
   onBecomeSponsorClick = () =>
@@ -39,6 +40,10 @@ export default class Sponsors extends React.PureComponent {
             <FlexView basis={50} />
             <a href="https://www.signifytechnology.com/" target="_blank">
               <img src={signify} style={{ height: 180 }} />
+            </a>
+            <FlexView basis={50} />
+            <a href="http://www.warda.it/" target="_blank">
+              <img src={warda} style={{ height: 160 }} />
             </a>
           </FlexView>
         </FlexView>
