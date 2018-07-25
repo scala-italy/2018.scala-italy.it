@@ -155,5 +155,56 @@ export const speakers = {
         </p>
       </div>
     )
+  },
+  labella: {
+    name: 'Fabio Labella',
+    company: 'NCR Corporation',
+    title: 'Shared state in pure FP: when a state monad won\'t do',
+    pictureUrl: require('../assets/speakers/labella.jpeg'),
+    color: palette.brown,
+    abstract: (
+      <div>
+        <p>
+          A shared cache, a concurrent counter, a mutable DB connection: they are all common
+          concerns in real-world applications that don’t fit the state monad model of returning a
+          new copy of the state each time. Does this mean we should drop pure FP in those cases? Of
+          course not!
+        </p>
+
+        <p>
+          This talk will show how mutable, shared, concurrent state is not only possible, but very
+          simple in pure FP, whilst remaining composable and easy to reason about.
+        </p>
+
+        <p>
+          On one hand, we will see how to put together several concepts such as the IO type,
+          Kleisli, and Free/Final Tagless. On the other, we’ll get at the very heart of what purity
+          is all about.
+        </p>
+      </div>
+    ),
+    bio: (
+      <div>
+        <p>
+          I’m a Senior Software Engineer based in Edinburgh, UK, working in Scala in the financial
+          industry.
+        </p>
+        <p>
+          I also actively participate in Open Source (as SystemFw): I’m one of the maintainers of
+          fs2 and http4s, and a contributor to cats, shapeless and most of the other libraries in
+          the Scala FP ecosystem.
+        </p>
+        <p>
+          {' '}
+          I have a passion for helping people master advanced concepts (e.g. see{' '}
+          <a href="https://twitter.com/balajisivaraman/status/894976114304499712" target="blank">
+            here
+          </a>) or{' '}
+          <a href="https://twitter.com/etorreborre/status/933344847364313088" target="blank">
+            here
+          </a>), so hit me up on Gitter if you have a question!
+        </p>
+      </div>
+    )
   }
 };
