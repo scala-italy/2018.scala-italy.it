@@ -3,6 +3,7 @@ import FlexView from 'react-flexview/lib';
 
 import './sponsors.css';
 import * as iterators from './iterators.png';
+import * as scalacenter from './scalacenter.png';
 
 export default class Supporters extends React.PureComponent {
   render() {
@@ -20,6 +21,9 @@ export default class Supporters extends React.PureComponent {
           >
             <a href="https://iterato.rs/" target="_blank">
               <img src={iterators} style={{ height: 90 }} />
+            </a>
+            <a href="https://scala.epfl.ch/" target="_blank">
+              <img src={scalacenter} style={{ height: 80 }} />
             </a>
           </FlexView>
         </FlexView>
