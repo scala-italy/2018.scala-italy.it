@@ -17,6 +17,10 @@ interface Speaker {
   title: string;
   bio: JSX.Element;
   abstract: JSX.Element;
+  cospeaker?: {
+    id: string,
+    name: string
+  };
 }
 
 type Speakers = { [name: string]: Speaker };
@@ -258,5 +262,80 @@ export const speakers: Speakers = {
         <p>We will also discuss how Uber uses Scala to provide on-the-fly statistical inference in an A/B testing context, as well as how Uber uses Livy and sparkmagic to process and analyze tremendous amounts of data using Scala in Jupyter notebooks.</p>
       </div>
     )
+  },
+  pretty: {
+    name: 'Jon Pretty',
+    company: 'Propensive',
+    pictureUrl: require('../assets/speakers/pretty.jpg'),
+    color: palette.purple,
+    bio: (
+      <div>
+        <p>Jon has worked full-time as a Scala developer since 2004, and has been heavily involved in the Scala community for as long as it has existed.</p>
+        <p>He travels extensively, speaking on a variety of Scala topics at many Scala events worldwide, including talks on his open-source libraries and original research on subjects such as type inference and the differences between type members and type parameters.</p>
+        <p>Jon chairs the Scala Center Advisory Board.</p>
+      </div>
+    ),
+    title: 'Ten Cool Things You Can Do With Scala 3',
+    abstract: (
+      <div>
+        <p>Scala 3 introduces a wealth of new features to the language: union and intersection types, trait parameters, implicit function types, auto-specialization, multiversal equality, and many more!</p>
+        <p>But what do these features mean for users? What can we do with these features? How will they make the code we write more elegant, more expressive and more typesafe?</p>
+        <p>This talk will take a grand tour of some of the new features in Scala 3, and will explore some of the cool new code we will be able to write that wasn’t possible with Scala 2.</p>
+      </div>
+    )
+  },
+  veltri: {
+    name: 'Saverio Veltri',
+    company: 'Radicalbit',
+    pictureUrl: require('../assets/speakers/veltri.png'),
+    color: palette.brown,
+    bio: (
+      <div>
+        <p>After taking his master degree in computer science engineer, Saverio gained a strong experience in Java and mobile technologies (iOs and Android) working either in small environments or big companies.</p>
+        <p>Afterward, he bumped into the reactive world and he became a certified Scala and Akka engineer.</p>
+        <p>Not completely satisfied with that stuff, he is currently working in the fast data area, specifically on Apache Flink and Kafka, at Radicalbit.</p>
+      </div>
+    ),
+    title: 'Leveraging Scala and Akka to build NSDb, a distributed time-series database',
+    abstract: (
+      <div>
+        <p>Nowadays, many batch and streaming processing frameworks leverage(d) Scala and Akka to build large-scale resilient distributed systems.</p>
+        <p>In the same spirit, when it came to building our own distributed database, we agreed the previous mentioned technological stack would be the best choice in order to accomplish every architectural requirement we had.</p>
+        <p>Given those assumptions, we built NSDb, a distributed time series database, streaming oriented and optimized for the Kappa architecture serving layer.</p>
+        <p>During this talk, we will introduce our solution with its main features. Then, we will go deeper through the architecture, the patterns and protocols being used to guarantee availability, resilience, and scalability.</p>
+        <p>In other words, we will focus on how it’s possible to use Scala and Akka to build a distributed system using high-level primitives without implementing anything from scratch.</p>
+      </div>
+    ),
+    cospeaker: {
+      id: 'mascetti',
+      name: 'Paolo Mascetti'
+    }
+  },
+  mascetti: {
+    name: 'Paolo Mascetti',
+    company: 'Radicalbit',
+    pictureUrl: require('../assets/speakers/mascetti.jpg'),
+    color: palette.green,
+    bio: (
+      <div>
+        <p>Paolo achieved a Master Degree in Computer Science in 2016 presenting his thesis in the Data Science field.</p>
+        <p>After graduation, he fell in love with Scala and worked as a consultant on an IoT based project.</p>
+        <p>Still passionate about data and machine learning, he’s actually working in Radicalbit as Data Engineer.</p>
+      </div>
+    ),
+    title: 'Leveraging Scala and Akka to build NSDb, a distributed time-series database',
+    abstract: (
+      <div>
+        <p>Nowadays, many batch and streaming processing frameworks leverage(d) Scala and Akka to build large-scale resilient distributed systems.</p>
+        <p>In the same spirit, when it came to building our own distributed database, we agreed the previous mentioned technological stack would be the best choice in order to accomplish every architectural requirement we had.</p>
+        <p>Given those assumptions, we built NSDb, a distributed time series database, streaming oriented and optimized for the Kappa architecture serving layer.</p>
+        <p>During this talk, we will introduce our solution with its main features. Then, we will go deeper through the architecture, the patterns and protocols being used to guarantee availability, resilience, and scalability.</p>
+        <p>In other words, we will focus on how it’s possible to use Scala and Akka to build a distributed system using high-level primitives without implementing anything from scratch.</p>
+      </div>
+    ),
+    cospeaker: {
+      id: 'veltri',
+      name: 'Saverio Veltri'
+    }
   }
 };

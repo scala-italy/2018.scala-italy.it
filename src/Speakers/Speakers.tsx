@@ -2,7 +2,6 @@ import * as React from 'react';
 import { View } from '../Basic';
 import Speaker from './Speaker';
 import * as Modal from 'react-modal';
-// import { Link } from 'react-router';
 
 import { speakers, keynotes } from './speakerInfo';
 import './speakers.css';
@@ -86,14 +85,12 @@ export default class Speakers extends React.Component<Props> {
             <View className="speaker-bio">{speaker && speaker.bio}</View>
             <h3>THE TALK</h3>
             <View className="title">{speaker && speaker.title}</View>
-            {/* {speaker &&
+            {speaker &&
               speaker.cospeaker && (
                 <View className="co-speaker">
-                  Co-presented with&nbsp;<Link to={`speakers/${speaker.cospeaker.id}`}>
-                    {speaker.cospeaker.name}
-                  </Link>
+                  Co-presented with&nbsp;<a href={speaker.cospeaker.id}> {speaker.cospeaker.name} </a>
                 </View>
-              )} */}
+              )}
             <View className="abstract">{speaker && speaker.abstract}</View>
           </View>
         </Modal>
