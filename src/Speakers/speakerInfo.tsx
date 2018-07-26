@@ -9,7 +9,19 @@ const palette = {
   purple: '#C31048'
 };
 
-export const keynotes = {
+interface Speaker {
+  name: string;
+  company: string;
+  pictureUrl: string;
+  color: string;
+  title: string;
+  bio: JSX.Element;
+  abstract: JSX.Element;
+}
+
+type Speakers = { [name: string]: Speaker };
+
+export const keynotes: Speakers = {
   klang: {
     name: 'Viktor Klang',
     company: 'Lightbend',
@@ -25,12 +37,32 @@ export const keynotes = {
         </p>
       </div>
     ),
-    title: 'To be announced!',
-    abstract: <div />
-  }
+    title: 'Addressing recent events',
+    abstract: (
+      <div>
+        <p>Is there a possible unification of stream processing a.k.a. Fast Data, and Microservices?</p>
+        <p>In this keynote, we’ll explore the problem and outline a possible solution.</p>
+      </div>
+    )
+  },
+  // miller: {
+  //   name: 'Heather Miller',
+  //   company: 'Scalacenter',
+  //   pictureUrl: require('../assets/speakers/miller.jpeg'),
+  //   color: palette.purple,
+  //   title: 'To be announced',
+  //   abstract: <div />,
+  //   bio: (
+  //     <div>
+  //       <p>Heather Miller is the executive director of the Scala Center at EPFL, where she is a research scientist, and an Assistant Clinical Professor at Northeastern University in Boston.</p>
+  //       <p>She recently completed her PhD in EPFL's Faculty of Computer and Communication Science where she contributed to the now-widespread programming language, Scala. Heather's research interests are at the intersection of data-centric distributed systems and programming languages, with a focus on transferring her research results into industrial use.</p>
+  //       <p>She has also led development of popular MOOCs some 800,000 students strong, such as "Functional Programming Principles in Scala."</p>
+  //     </div>
+  //   )
+  // }
 };
 
-export const speakers = {
+export const speakers: Speakers = {
   dotta: {
     name: 'Mirco Dotta',
     company: 'Triplequote',
@@ -57,15 +89,13 @@ export const speakers = {
         </p>
       </div>
     ),
-    title: 'Effective Scala: Reloaded!',
+    title: '5 things you need to know about Scala compilation',
     abstract: (
       <div>
-        <p>Everything you always wanted to know about Scala but were afraid to ask.</p>
-        <p>
-          If you want to be able to optimize your use of the Scala programming language to solve
-          real world problems without explosions, broken thumbs or bullet wounds then this is the
-          session for you.
-        </p>
+        <p>You love Scala, but the one aspect you have a hard time accepting is long compile times.</p>
+        <p>It’s not uncommon for a project to experience compilation times of a handful of minutes, if not worse. On top of that, compilation times are unpredictable, depending on a combination of language features, external libraries, and type annotations.</p>
+        <p>A single line change may increase compilation times ten-fold!</p>
+        <p>We are often ignorant of what makes our Scala project compile so slowly, and this session intends to fill the gap. We will explore 5 common causes leading to long compilation times and, after the session, you’ll finally feel like you have control over your projects’ compile time.</p>
       </div>
     )
   },
@@ -158,7 +188,7 @@ export const speakers = {
   },
   labella: {
     name: 'Fabio Labella',
-    company: 'NCR Corporation',
+    company: 'OVO Energy',
     title: 'Shared state in pure FP: when a state monad won\'t do',
     pictureUrl: require('../assets/speakers/labella.jpeg'),
     color: palette.brown,
@@ -204,6 +234,28 @@ export const speakers = {
             here
           </a>), so hit me up on Gitter if you have a question!
         </p>
+      </div>
+    )
+  },
+  jones: {
+    name: 'Nick Jones',
+    company: 'Uber',
+    pictureUrl: require('../assets/speakers/jones.jpeg'),
+    color: palette.green,
+    title: '',
+    bio: (
+      <div>
+        <p>Nick Jones is a data scientist on the cash product team at Uber in the Amsterdam office.</p>
+        <p>Prior to moving to Amsterdam he worked at Uber HQ in San Francisco doing Uber integrations with products like Google Maps, Facebook Messenger, and Snapchat.</p>
+        <p>He has also worked at a Silicon Valley firm that provided expert witness testimony in litigation cases involving machine learning and statistics.</p>
+      </div>
+    ),
+    abstract: (
+      <div>
+        <p>At Uber Data Science we use Scala to help us handle experimentation, machine learning, and data analysis at tremendous scale.</p>
+        <p>For example, just figuring out which users were exposed to what treatment experience at what time requires processing >50 billion events per day from four mobile apps and dozens of backend services.</p>
+        <p>This talk will outline how Uber uses Scala to optimize spark jobs for machine learning pipelines, select and transform machine learning features through a Scala-based DSL, and train models.</p>
+        <p>We will also discuss how Uber uses Scala to provide on-the-fly statistical inference in an A/B testing context, as well as how Uber uses Livy and sparkmagic to process and analyze tremendous amounts of data using Scala in Jupyter notebooks.</p>
       </div>
     )
   }
