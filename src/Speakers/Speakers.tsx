@@ -3,7 +3,7 @@ import { View } from '../Basic';
 import Speaker from './Speaker';
 import * as Modal from 'react-modal';
 
-import { speakers, keynotes } from './speakerInfo';
+import { speakers, keynotes, workshops } from './speakerInfo';
 import './speakers.css';
 
 type Props = {
@@ -28,7 +28,7 @@ export default class Speakers extends React.Component<Props> {
       }
     };
 
-    const speaker = speakerId && (speakers[speakerId] || keynotes[speakerId]);
+    const speaker = speakerId && (speakers[speakerId] || keynotes[speakerId] || workshops[speakerId]);
 
     return (
       <View column className="speakers" hAlignContent="center">
@@ -70,6 +70,24 @@ export default class Speakers extends React.Component<Props> {
               ))}
           </View>
         </View>
+        <View column hAlignContent="center">
+          <h3>WORKSHOPS</h3>
+          <View hAlignContent="center" wrap>
+            {Object.keys(workshops)
+              .map(id => ({ ...workshops[id], id }))
+              .map(s => (
+                <Speaker
+                  key={s.id}
+                  src={s.pictureUrl}
+                  color={s.color}
+                  id={s.id}
+                  name={s.name}
+                  company={s.company}
+                  onClick={onSpeakerClick}
+                />
+              ))}
+          </View>
+        </View>
         <Modal {...modalProps}>
           <View column hAlignContent="center">
             {speaker &&
@@ -83,7 +101,7 @@ export default class Speakers extends React.Component<Props> {
                 />
               )}
             <View className="speaker-bio">{speaker && speaker.bio}</View>
-            <h3>THE TALK</h3>
+            <h3>{speaker && speaker.talkType === 'workshop' ? 'THE WORKSHOP' : 'THE TALK'}</h3>
             <View className="title">{speaker && speaker.title}</View>
             {speaker &&
               speaker.cospeaker && (

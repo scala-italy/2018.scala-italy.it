@@ -21,6 +21,7 @@ interface Speaker {
     id: string,
     name: string
   };
+  talkType?: 'talk' | 'workshop';
 }
 
 type Speakers = { [name: string]: Speaker };
@@ -49,21 +50,21 @@ export const keynotes: Speakers = {
       </div>
     )
   },
-  // miller: {
-  //   name: 'Heather Miller',
-  //   company: 'Scalacenter',
-  //   pictureUrl: require('../assets/speakers/miller.jpeg'),
-  //   color: palette.purple,
-  //   title: 'To be announced',
-  //   abstract: <div />,
-  //   bio: (
-  //     <div>
-  //       <p>Heather Miller is the executive director of the Scala Center at EPFL, where she is a research scientist, and an Assistant Clinical Professor at Northeastern University in Boston.</p>
-  //       <p>She recently completed her PhD in EPFL's Faculty of Computer and Communication Science where she contributed to the now-widespread programming language, Scala. Heather's research interests are at the intersection of data-centric distributed systems and programming languages, with a focus on transferring her research results into industrial use.</p>
-  //       <p>She has also led development of popular MOOCs some 800,000 students strong, such as "Functional Programming Principles in Scala."</p>
-  //     </div>
-  //   )
-  // }
+  miller: {
+    name: 'Heather Miller',
+    company: 'Scalacenter',
+    pictureUrl: require('../assets/speakers/miller.jpeg'),
+    color: palette.purple,
+    title: 'To be announced',
+    abstract: <div />,
+    bio: (
+      <div>
+        <p>Heather Miller is the executive director of the Scala Center at EPFL, where she is a research scientist, and an Assistant Clinical Professor at Northeastern University in Boston.</p>
+        <p>She recently completed her PhD in EPFL's Faculty of Computer and Communication Science where she contributed to the now-widespread programming language, Scala. Heather's research interests are at the intersection of data-centric distributed systems and programming languages, with a focus on transferring her research results into industrial use.</p>
+        <p>She has also led development of popular MOOCs some 800,000 students strong, such as "Functional Programming Principles in Scala."</p>
+      </div>
+    )
+  }
 };
 
 export const speakers: Speakers = {
@@ -337,5 +338,112 @@ export const speakers: Speakers = {
       id: 'veltri',
       name: 'Saverio Veltri'
     }
+  },
+  hupel: {
+    name: 'Lars Hupel',
+    company: '',
+    pictureUrl: require('../assets/speakers/hupel.jpeg'),
+    color: palette.purple,
+    bio: (
+      <div>
+        <p>Lars is a PhD student in Munich, Germany, working in the area of theorem proving.</p>
+        <p>He has been using Scala for quite a while now, and is known as one of the founders of the typelevel initiative which is dedicated to providing principled, type-driven Scala libraries.</p>
+        <p>He also talks about Haskell and Isabelle a lot.</p>
+      </div>
+    ),
+    title: 'Numeric Programming with Spire',
+    abstract: (
+      <div>
+        <p>Numeric programming is a notoriously difficult topic. For number crunching, e.g. solving systems of linear equations, we need raw performance.</p>
+        <p>However, using floating-point numbers may lead to inaccurate results. On top of that, as functional programmers, we’d really like to abstract over concrete number types, which is where abstract algebra comes into play.</p>
+        <p>This interplay between abstract and concrete, and the fact that everything needs to run on finite hardware, is what makes good library support necessary for writing fast & correct programs.</p>
+        <p>Spire is such a library in the Typelevel Scala ecosystem. This talk will be an introduction to Spire, showcasing the ‘number tower’, real-ish numbers and how to obey the law.</p>
+      </div>
+    )
+  },
+  koestler: {
+    name: 'Anderas Koestler',
+    company: 'Finally Tagless Ltd',
+    pictureUrl: require('../assets/speakers/koestler.jpg'),
+    color: palette.brown,
+    bio: (
+      <div>
+        <p>Andreas is a freelance software engineer currently free wheeling at Finally Tagless Ltd.</p>
+        <p>He has been in the business of developing scalable and reliable software for more than 15 years - embracing Scala’s quirky idiosyncrasies for the last 5 of those.</p>
+        <p>When he is not humbled by his coworkers or his motorbike he is hacking on shapeless and helping to re-home ex racing Greyhounds.</p>
+      </div>
+    ),
+    title: 'Simon-Says: Correct-by-Construction RBAC',
+    abstract: (
+      <div>
+        <p>In this talk I will derive the logic foundations of Role Based Access Control, turn these into typed programs, and show how we can leverage Scala’s type system to enforce user authorisation at compile time and provide statically computable security contexts.</p>
+      </div>
+    )
+  },
+};
+
+export const workshops: Speakers = {
+  cartia: {
+    name: 'Mario Cartia',
+    company: '',
+    pictureUrl: require('../assets/speakers/cartia.jpg'),
+    color: palette.green,
+    title: 'Apache Spark 101 for Scala developers',
+    abstract: (
+      <div>
+        <p>Apache Spark is a fast and general-purpose cluster computing framework capable of processing large amounts of data 10 to 100 times faster than Hadoop.</p>
+        <p> During the workshop the participants will understand basic framework internals and the use of RDD and Dataframe APIs using Scala language.</p>
+      </div>
+    ),
+    bio: (
+      <div>
+        <p>Mario Cartia is an evangelist, consultant and trainer in the field of Big Data.</p>
+        <p>He has over 20 years of experience in IT, during which he has worked with the most important organizations and companies in the Italian and international scene.</p>
+      </div>
+    ),
+    talkType: 'workshop'
+  },
+  jacobowitz: {
+    name: 'Luka Jacobowitz',
+    company: 'codecentric',
+    pictureUrl: require('../assets/speakers/jacobowitz.jpg'),
+    color: palette.purple,
+    title: 'Getting Up and Running with the Typelevel stack',
+    abstract: (
+      <div>
+        <p>In recent years the various typelevel libraries like Cats, Monix, Http4s, Circe and others have gained more and more popularity.</p>
+        <p>In this workshop you’ll learn how to get up to speed with this ecosystem and develop a small, but extensible application in purely functional Scala.</p>
+        <p>We’ll be doing a step-by-step walkthrough on how to setup your development stack and gradually introduce Cats, Http4s, Circe and Refined to develop a REST Service.</p>
+      </div>
+    ),
+    bio: (
+      <div>
+        <p>Luka Jacobowitz is a functional programmer from Germany passionate about finding great abstractions to engineering problems.</p>
+        <p>He's also a maintainer of several typelevel projects, including various Cats libraries as well as OutWatch.</p>
+        <p>He cares deeply about equality and seek to make learning of pure functional programming as easy as possible.</p>
+      </div>
+    ),
+    talkType: 'workshop'
+  },
+  geirsson: {
+    name: 'Ólafur Páll Geirsson',
+    company: 'Scalacenter',
+    pictureUrl: require('../assets/speakers/geirsson.jpg'),
+    color: palette.brown,
+    title: 'Let\'s build Scala developer tools!',
+    abstract: (
+      <div>
+        <p>Building Scala developer tools has traditionally required deep expertise with Scala compiler internals, but thanks to Scalameta and SemanticDB it’s become accessible to more developers.</p>
+        <p>We will cover compiler-related topics such tokens, trees, symbols and types. You will learn how to use command-line utilities like metac, metacp, metap to quickly produce and examine SemanticDB data. In the end, we finish by building a tool to automatically generate documentation from Scala source code.</p>
+        <p>Participants are expected to have basic programming experience with Scala, but familiarity with compilers or metaprogramming is not required.</p>
+      </div>
+    ),
+    bio: (
+      <div>
+        <p>Ólafur Páll Geirsson is a software developer at the Scala Center where he works on developer tools.</p>
+        <p>He is a Scalafmt, Scalafix and Scalameta maintainer.</p>
+      </div>
+    ),
+    talkType: 'workshop'
   }
 };
