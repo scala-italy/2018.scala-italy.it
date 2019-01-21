@@ -24,8 +24,8 @@ export default class Cover extends React.Component<Props> {
         <Button
           buttonState="ready"
           className="action-button ticket-button"
-          label="Get your ticket!"
-          onClick={this.onTicketClick}
+          label="Watch the videos!"
+          onClick={this.onWatchVideosClick}
         />
         <div className="arrow bounce" onClick={onArrowClick} />
       </div>

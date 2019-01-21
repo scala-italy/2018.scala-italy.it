@@ -9,6 +9,8 @@ import * as lightbend from './lightbend.png';
 import * as signify from './signify.png';
 import * as warda from './warda.png';
 import * as moneyfarm from './moneyfarm.png';
+import * as scalac from './scalac.png';
+import * as avanscoperta from './avanscoperta.png';
 
 export default class Sponsors extends React.PureComponent {
   onBecomeSponsorClick = () =>
@@ -49,6 +51,14 @@ export default class Sponsors extends React.PureComponent {
             <FlexView basis={50} />
             <a href="https://www.moneyfarm.com/" target="_blank">
               <img src={moneyfarm} style={{ height: 160 }} />
+            </a>
+            <FlexView basis={50} />
+            <a href="https://scalac.io/" target="_blank">
+              <img src={scalac} style={{ height: 160 }} />
+            </a>
+            <FlexView basis={50} />
+            <a href="https://www.avanscoperta.it/" target="_blank">
+              <img src={avanscoperta} style={{ maxWidth: 500 }} />
             </a>
           </FlexView>
         </FlexView>

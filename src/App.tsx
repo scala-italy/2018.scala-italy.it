@@ -6,6 +6,7 @@ import Sponsors from './Sponsors/Sponsors';
 import Partners from './Partners/Partners';
 import Venue from './Venue/Venue';
 import Supporters from './Supporters/Supporters';
+import Schedule from './Schedule/Schedule';
 
 require('./App.css');
 
@@ -47,6 +48,7 @@ class App extends React.Component<{}, State> {
           onSpeakerClick={this.onSpeakerClick}
           onSpeakerModalClose={this.onSpeakerModalClose}
         />
+        <Schedule />
         <Sponsors />
         <Supporters />
         <Partners />
