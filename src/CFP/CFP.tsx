@@ -4,7 +4,7 @@ import { Button, View } from '../Basic';
 require('./cfp.css');
 
 export default class CFP extends React.PureComponent {
-  onBecomeSpeakerClick = () => window.open('https://www.papercall.io/scala-italy2018', '_blank');
+  onBecomeSpeakerClick = () => window.open('https://www.papercall.io/scala-italy-2019', '_blank');
 
   render() {
     const { onBecomeSpeakerClick } = this;

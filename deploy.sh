@@ -13,6 +13,6 @@ BUCKET_URL+="2019.scala-italy.it"
 yarn build
 
 # upload everything but gzipped files
-aws s3 sync build $BUCKET_URL --delete --acl public-read --region eu-central-1 --exclude "*.gz"
+aws-vault exec buildo -- aws s3 sync build $BUCKET_URL --delete --acl public-read --region eu-central-1 --exclude "*.gz"
 # upload gzipped files with correct content encoding
-aws s3 sync build $BUCKET_URL --delete --acl public-read --region eu-central-1 --exclude "*" --include "*.gz" --content-encoding gzip
+aws-vault exec buildo -- aws s3 sync build $BUCKET_URL --delete --acl public-read --region eu-central-1 --exclude "*" --include "*.gz" --content-encoding gzip
