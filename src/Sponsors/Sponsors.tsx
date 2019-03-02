@@ -5,12 +5,34 @@ import Button from 'buildo-react-components/lib/Button';
 import './sponsors.css';
 import * as bitrock from './bitrock.png';
 import * as unicredit from './unicredit.jpg';
-import * as lightbend from './lightbend.png';
-import * as signify from './signify.png';
-import * as warda from './warda.png';
-import * as moneyfarm from './moneyfarm.png';
-import * as scalac from './scalac.png';
-import * as avanscoperta from './avanscoperta.png';
+import * as vodafone from './vodafone.png';
+// import * as lightbend from './lightbend.png';
+// import * as signify from './signify.png';
+// import * as warda from './warda.png';
+// import * as moneyfarm from './moneyfarm.png';
+// import * as scalac from './scalac.png';
+// import * as avanscoperta from './avanscoperta.png';
+
+const goldSponsors = [
+  {
+    name: 'vodafone',
+    logo: vodafone,
+    link: 'https://vodafone.it'
+  }
+];
+
+const silverSponsors = [
+  {
+    name: 'bitrock',
+    logo: bitrock,
+    link: 'https://bitrock.it'
+  },
+  {
+    name: 'unicredit',
+    logo: unicredit,
+    link: 'https://www.unicreditgroup.eu/'
+  }
+];
 
 export default class Sponsors extends React.PureComponent {
   onBecomeSponsorClick = () =>
@@ -23,43 +45,32 @@ export default class Sponsors extends React.PureComponent {
         <div className="section-name right">Sponsors</div>
         <FlexView column hAlignContent="center">
           <h1>SPONSORS</h1>
+          <h2>GOLD SPONSORS</h2>
           <FlexView
             style={{ flexWrap: 'wrap', maxWidth: 1000 }}
             hAlignContent="center"
             width="100%"
             vAlignContent="center"
           >
-            <a href="http://bitrock.it" target="_blank">
-              <img src={bitrock} />
-            </a>
-            <FlexView basis={50} />
-            <a href="https://www.unicreditgroup.eu" target="_blank">
-              <img src={unicredit} />
-            </a>
-            <FlexView basis={50} />
-            <a href="https://www.lightbend.com" target="_blank">
-              <img src={lightbend} />
-            </a>
-            <FlexView basis={50} />
-            <a href="https://www.signifytechnology.com/" target="_blank">
-              <img src={signify} style={{ height: 180 }} />
-            </a>
-            <FlexView basis={50} />
-            <a href="http://www.warda.it/" target="_blank">
-              <img src={warda} style={{ height: 160 }} />
-            </a>
-            <FlexView basis={50} />
-            <a href="https://www.moneyfarm.com/" target="_blank">
-              <img src={moneyfarm} style={{ height: 160 }} />
-            </a>
-            <FlexView basis={50} />
-            <a href="https://scalac.io/" target="_blank">
-              <img src={scalac} style={{ height: 160 }} />
-            </a>
-            <FlexView basis={50} />
-            <a href="https://www.avanscoperta.it/" target="_blank">
-              <img src={avanscoperta} style={{ maxWidth: 500 }} />
-            </a>
+            {goldSponsors.map(({ logo, link, name }) => (
+              <a key={name} href={link} target="_blank">
+                <img className="gold" src={logo} />
+              </a>
+            ))}
+          </FlexView>
+          <FlexView basis={50} />
+          <h2>SILVER SPONSORS</h2>
+          <FlexView
+            style={{ flexWrap: 'wrap', maxWidth: 1000 }}
+            hAlignContent="center"
+            width="100%"
+            vAlignContent="center"
+          >
+            {silverSponsors.map(({ logo, link, name }) => (
+              <a key={name} href={link} target="_blank">
+                <img className="silver" src={logo} height={20} />
+              </a>
+            ))}
           </FlexView>
         </FlexView>
         <FlexView basis={50} />

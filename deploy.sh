@@ -8,7 +8,7 @@ case $1 in
 esac
 
 BUCKET_URL="s3://$PREFIX"
-BUCKET_URL+="2018.scala-italy.it"
+BUCKET_URL+="2019.scala-italy.it"
 
 yarn build
 

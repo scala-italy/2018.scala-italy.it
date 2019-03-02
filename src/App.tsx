@@ -1,12 +1,13 @@
 import * as React from 'react';
 import Cover from './Cover/Cover';
 import Footer from './Footer/Footer';
-import Speakers from './Speakers/Speakers';
+import CFP from './CFP/CFP';
+// import Speakers from './Speakers/Speakers';
 import Sponsors from './Sponsors/Sponsors';
 import Partners from './Partners/Partners';
-import Venue from './Venue/Venue';
-import Supporters from './Supporters/Supporters';
-import Schedule from './Schedule/Schedule';
+// import Venue from './Venue/Venue';
+// import Supporters from './Supporters/Supporters';
+// import Schedule from './Schedule/Schedule';
 
 require('./App.css');
 
@@ -15,7 +16,6 @@ type State = {
 };
 
 class App extends React.Component<{}, State> {
-
   state: State = {};
 
   componentDidMount() {
@@ -38,21 +38,22 @@ class App extends React.Component<{}, State> {
   }
 
   render() {
-    const { speakerId } = this.state;
+    // const { speakerId } = this.state;
 
     return (
       <div className="app">
         <Cover onArrowClick={this.onArrowClick} />
-        <Speakers
+        <CFP />
+        <Sponsors />
+        {/* <Supporters /> */}
+        <Partners />
+        {/* <Speakers
           speakerId={speakerId}
           onSpeakerClick={this.onSpeakerClick}
           onSpeakerModalClose={this.onSpeakerModalClose}
-        />
-        <Schedule />
-        <Sponsors />
-        <Supporters />
-        <Partners />
-        <Venue />
+        /> */}
+        {/* <Schedule />
+        <Venue /> */}
         <Footer />
       </div>
     );

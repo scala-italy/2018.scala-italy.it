@@ -2,20 +2,30 @@
   "compilerOptions": {
     "module": "commonjs",
     "target": "es5",
-    "noImplicitAny": true,
-    "suppressImplicitAnyIndexErrors": true,
+    "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "strictNullChecks": true,
     "sourceMap": false,
-    "alwaysStrict": true,
     "allowJs": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "pretty": true,
+    "forceConsistentCasingInFileNames": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "baseUrl": ".",
     "jsx": "react",
     "removeComments": true,
-    "experimentalDecorators": true,
-    "lib": [
-      "es6", "dom"
-    ]
+    "lib": ["esnext", "dom"],
+    "paths": {
+      "model": ["src/model"],
+      "HTTPAPI": ["src/HTTPAPI"],
+      "container": ["src/container"],
+      "Basic": ["src/components/Basic"],
+      "queries": ["src/queries"],
+      "commands": ["src/commands"],
+      "transitions": ["src/transitions"],
+      "*": ["src/components/Basic/*", "src/components/*", "src/*"]
+    }
   },
   "include": [
     "src/**/*",
