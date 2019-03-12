@@ -5,11 +5,12 @@ import CFP from './CFP/CFP';
 // import Speakers from './Speakers/Speakers';
 import Sponsors from './Sponsors/Sponsors';
 import Partners from './Partners/Partners';
+import Speakers from './Speakers/Speakers';
 // import Venue from './Venue/Venue';
 // import Supporters from './Supporters/Supporters';
 // import Schedule from './Schedule/Schedule';
 
-require('./App.css');
+import './App.scss';
 
 type State = {
   speakerId?: string | undefined;
@@ -28,30 +29,30 @@ class App extends React.Component<{}, State> {
   onArrowClick = () => (window as any).bringIntoView(document.querySelector('.cfp'), 1000);
 
   onSpeakerClick = (name: string) => {
-    history.pushState({}, undefined, `/speakers/${name}`);
+    history.pushState({}, '', `/speakers/${name}`);
     this.setState({ speakerId: name });
   }
 
   onSpeakerModalClose = () => {
-    history.pushState({}, undefined, '/');
+    history.pushState({}, '', '/');
     this.setState({ speakerId: undefined });
   }
 
   render() {
-    // const { speakerId } = this.state;
+    const { speakerId } = this.state;
 
     return (
       <div className="app">
         <Cover onArrowClick={this.onArrowClick} />
         <CFP />
-        <Sponsors />
-        {/* <Supporters /> */}
-        <Partners />
-        {/* <Speakers
+        <Speakers
           speakerId={speakerId}
           onSpeakerClick={this.onSpeakerClick}
           onSpeakerModalClose={this.onSpeakerModalClose}
-        /> */}
+        />
+        <Sponsors />
+        {/* <Supporters /> */}
+        <Partners />
         {/* <Schedule />
         <Venue /> */}
         <Footer />

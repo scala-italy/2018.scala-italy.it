@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { View } from '../Basic';
 import Speaker from './Speaker';
-import * as Modal from 'react-modal';
+import Modal from 'react-modal';
 
 import { speakers, keynotes, workshops } from './speakerInfo';
-import './speakers.css';
+import './speakers.scss';
 
 type Props = {
   onSpeakerClick: (id: string) => void;
@@ -52,7 +52,7 @@ export default class Speakers extends React.Component<Props> {
               ))}
           </View>
         </View>
-        <View column hAlignContent="center">
+        {/* <View column hAlignContent="center">
           <h3>SPEAKERS</h3>
           <View hAlignContent="center" wrap>
             {Object.keys(speakers)
@@ -87,7 +87,7 @@ export default class Speakers extends React.Component<Props> {
                 />
               ))}
           </View>
-        </View>
+        </View> */}
         <Modal {...modalProps}>
           <View column hAlignContent="center">
             {speaker &&

@@ -2,10 +2,10 @@ import * as React from 'react';
 import FlexView from 'react-flexview';
 import Button from 'buildo-react-components/lib/Button';
 
-import './sponsors.css';
-import * as bitrock from './bitrock.png';
-import * as unicredit from './unicredit.jpg';
-import * as vodafone from './vodafone.png';
+import './sponsors.scss';
+import bitrock from './bitrock.png';
+import unicredit from './unicredit.jpg';
+import vodafone from './vodafone.png';
 // import * as lightbend from './lightbend.png';
 // import * as signify from './signify.png';
 // import * as warda from './warda.png';

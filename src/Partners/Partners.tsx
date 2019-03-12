@@ -1,9 +1,9 @@
 import * as React from 'react';
 import FlexView from 'react-flexview';
 
-import './partners.css';
+import './partners.scss';
 // import * as develer from './develer.png';
-import * as buildo from './buildo.png';
+import buildo from './buildo.png';
 
 export default class Partners extends React.PureComponent {
   render() {

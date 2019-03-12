@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { View } from '../Basic';
-
-import './schedule.css';
+import './schedule.scss';
 import { keynotes, speakers, workshops } from '../Speakers/speakerInfo';
 
 const allSpeakers = { ...keynotes, ...speakers, ...workshops };

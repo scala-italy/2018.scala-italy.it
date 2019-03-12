@@ -1,8 +1,8 @@
 import * as React from 'react';
 import { View } from '../Basic';
-import * as cx from 'classnames';
+import cx from 'classnames';
 
-import './speaker.css';
+import './speaker.scss';
 
 type Props = {
   src: string;

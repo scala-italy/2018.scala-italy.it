@@ -1,14 +1,14 @@
 import * as React from 'react';
 import FlexView from 'react-flexview/lib';
 
-import './sponsors.css';
-import * as iterators from './iterators.png';
-import * as scalacenter from './scalacenter.png';
-import * as vodafone from './vodafone.jpg';
-import * as scalatimes from './scalatimes.png';
-import * as manning from './manning.png';
-import * as radicalbit from './radicalbit.png';
-import * as lambdadays from './lambdadays.png';
+import './sponsors.scss';
+import iterators from './iterators.png';
+import scalacenter from './scalacenter.png';
+import vodafone from './vodafone.jpg';
+import scalatimes from './scalatimes.png';
+import manning from './manning.png';
+import radicalbit from './radicalbit.png';
+import lambdadays from './lambdadays.png';
 
 export default class Supporters extends React.PureComponent {
   render() {

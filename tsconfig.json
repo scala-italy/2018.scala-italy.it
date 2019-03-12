@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "module": "commonjs",
+    "module": "esnext",
     "target": "es5",
     "strict": true,
     "noUnusedLocals": true,
@@ -12,20 +12,19 @@
     "pretty": true,
     "forceConsistentCasingInFileNames": true,
     "suppressImplicitAnyIndexErrors": true,
-    "baseUrl": ".",
-    "jsx": "react",
+    "jsx": "preserve",
     "removeComments": true,
-    "lib": ["esnext", "dom"],
-    "paths": {
-      "model": ["src/model"],
-      "HTTPAPI": ["src/HTTPAPI"],
-      "container": ["src/container"],
-      "Basic": ["src/components/Basic"],
-      "queries": ["src/queries"],
-      "commands": ["src/commands"],
-      "transitions": ["src/transitions"],
-      "*": ["src/components/Basic/*", "src/components/*", "src/*"]
-    }
+    "lib": [
+      "esnext",
+      "dom"
+    ],
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": true
   },
   "include": [
     "src/**/*",

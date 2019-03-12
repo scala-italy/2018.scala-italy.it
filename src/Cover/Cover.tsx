@@ -2,7 +2,8 @@ import * as React from 'react';
 // import Button from 'buildo-react-components/lib/Button';
 // import MailchimpForm from 'MailchimpForm/MailchimpForm';
 
-require('./cover.css');
+import './cover.scss';
+
 const logo = require('../assets/logo.png');
 
 type Props = {
