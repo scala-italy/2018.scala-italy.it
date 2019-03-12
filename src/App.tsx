@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { useState, useCallback, useEffect } from 'react';
 import Cover from './Cover/Cover';
 import Footer from './Footer/Footer';
 import CFP from './CFP/CFP';
@@ -12,53 +13,50 @@ import Speakers from './Speakers/Speakers';
 
 import './App.scss';
 
-type State = {
-  speakerId?: string | undefined;
-};
+function App() {
+  const [speakerId, setSpeakerId] = useState<string | undefined>('');
 
-class App extends React.Component<{}, State> {
-  state: State = {};
-
-  componentDidMount() {
+  useEffect(() => {
     const speakerId = window.location.pathname.replace('/speakers/', '').replace('/', '');
     if (speakerId !== '') {
-      this.setState({ speakerId });
+      setSpeakerId(speakerId);
     }
+  });
+
+  function onArrowClick() {
+    (window as any).bringIntoView(document.querySelector('.cfp'), 1000);
   }
 
-  onArrowClick = () => (window as any).bringIntoView(document.querySelector('.cfp'), 1000);
+  const onSpeakerClick = useCallback(
+    (name: string) => {
+      history.pushState({}, '', `/speakers/${name}`);
+      setSpeakerId(name);
+    },
+    [speakerId]
+  );
 
-  onSpeakerClick = (name: string) => {
-    history.pushState({}, '', `/speakers/${name}`);
-    this.setState({ speakerId: name });
-  }
-
-  onSpeakerModalClose = () => {
+  function onSpeakerModalClose() {
     history.pushState({}, '', '/');
-    this.setState({ speakerId: undefined });
+    setSpeakerId(undefined);
   }
 
-  render() {
-    const { speakerId } = this.state;
-
-    return (
-      <div className="app">
-        <Cover onArrowClick={this.onArrowClick} />
-        <CFP />
-        <Speakers
-          speakerId={speakerId}
-          onSpeakerClick={this.onSpeakerClick}
-          onSpeakerModalClose={this.onSpeakerModalClose}
-        />
-        <Sponsors />
-        {/* <Supporters /> */}
-        <Partners />
-        {/* <Schedule />
+  return (
+    <div className="app">
+      <Cover onArrowClick={onArrowClick} />
+      <CFP />
+      <Speakers
+        speakerId={speakerId}
+        onSpeakerClick={onSpeakerClick}
+        onSpeakerModalClose={onSpeakerModalClose}
+      />
+      <Sponsors />
+      {/* <Supporters /> */}
+      <Partners />
+      {/* <Schedule />
         <Venue /> */}
-        <Footer />
-      </div>
-    );
-  }
+      <Footer />
+    </div>
+  );
 }
 
 export default App;
