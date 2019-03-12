@@ -12,47 +12,42 @@ type Props = {
   onSpeakerModalClose: () => void;
 };
 
-export default class Speakers extends React.Component<Props> {
-  render() {
-    const {
-      props: { onSpeakerClick, speakerId, onSpeakerModalClose }
-    } = this;
-
-    const modalProps: Modal.Props = {
-      isOpen: !!speakerId,
-      onRequestClose: onSpeakerModalClose,
-      style: {
-        content: {
-          style: { zIndex: 100 }
-        }
+export function Speakers({ onSpeakerClick, speakerId, onSpeakerModalClose }: Props) {
+  const modalProps: Modal.Props = {
+    isOpen: !!speakerId,
+    onRequestClose: onSpeakerModalClose,
+    style: {
+      content: {
+        style: { zIndex: 100 }
       }
-    };
+    }
+  };
 
-    const speaker = speakerId && (speakers[speakerId] || keynotes[speakerId] || workshops[speakerId]);
+  const speaker = speakerId && (speakers[speakerId] || keynotes[speakerId] || workshops[speakerId]);
 
-    return (
-      <View column className="speakers" hAlignContent="center">
-        <div className="section-name left">Speakers</div>
-        <div className="section-name right">Speakers</div>
-        <View column hAlignContent="center">
-          <h3>KEYNOTES</h3>
-          <View hAlignContent="center" wrap>
-            {Object.keys(keynotes)
-              .map(id => ({ ...keynotes[id], id }))
-              .map(s => (
-                <Speaker
-                  key={s.id}
-                  src={s.pictureUrl}
-                  color={s.color}
-                  id={s.id}
-                  name={s.name}
-                  company={s.company}
-                  onClick={onSpeakerClick}
-                />
-              ))}
-          </View>
+  return (
+    <View column className="speakers" hAlignContent="center">
+      <div className="section-name left">Speakers</div>
+      <div className="section-name right">Speakers</div>
+      <View column hAlignContent="center">
+        <h3>KEYNOTES</h3>
+        <View hAlignContent="center" wrap>
+          {Object.keys(keynotes)
+            .map(id => ({ ...keynotes[id], id }))
+            .map(s => (
+              <Speaker
+                key={s.id}
+                src={s.pictureUrl}
+                color={s.color}
+                id={s.id}
+                name={s.name}
+                company={s.company}
+                onClick={onSpeakerClick}
+              />
+            ))}
         </View>
-        {/* <View column hAlignContent="center">
+      </View>
+      {/* <View column hAlignContent="center">
           <h3>SPEAKERS</h3>
           <View hAlignContent="center" wrap>
             {Object.keys(speakers)
@@ -88,31 +83,28 @@ export default class Speakers extends React.Component<Props> {
               ))}
           </View>
         </View> */}
-        <Modal {...modalProps}>
-          <View column hAlignContent="center">
-            {speaker &&
-              speakerId && (
-                <Speaker
-                  src={speaker.pictureUrl}
-                  id={speakerId}
-                  color={speaker.color}
-                  name={speaker.name}
-                  company={speaker.company}
-                />
-              )}
-            <View className="speaker-bio">{speaker && speaker.bio}</View>
-            <h3>{speaker && speaker.talkType === 'workshop' ? 'THE WORKSHOP' : 'THE TALK'}</h3>
-            <View className="title">{speaker && speaker.title}</View>
-            {speaker &&
-              speaker.cospeaker && (
-                <View className="co-speaker">
-                  Co-presented with&nbsp;<a href={speaker.cospeaker.id}> {speaker.cospeaker.name} </a>
-                </View>
-              )}
-            <View className="abstract">{speaker && speaker.abstract}</View>
-          </View>
-        </Modal>
-      </View>
-    );
-  }
+      <Modal {...modalProps}>
+        <View column hAlignContent="center">
+          {speaker && speakerId && (
+            <Speaker
+              src={speaker.pictureUrl}
+              id={speakerId}
+              color={speaker.color}
+              name={speaker.name}
+              company={speaker.company}
+            />
+          )}
+          <View className="speaker-bio">{speaker && speaker.bio}</View>
+          <h3>{speaker && speaker.talkType === 'workshop' ? 'THE WORKSHOP' : 'THE TALK'}</h3>
+          <View className="title">{speaker && speaker.title}</View>
+          {speaker && speaker.cospeaker && (
+            <View className="co-speaker">
+              Co-presented with&nbsp;<a href={speaker.cospeaker.id}> {speaker.cospeaker.name} </a>
+            </View>
+          )}
+          <View className="abstract">{speaker && speaker.abstract}</View>
+        </View>
+      </Modal>
+    </View>
+  );
 }

@@ -1,19 +1,15 @@
 import * as React from 'react';
 import { useState, useCallback, useEffect } from 'react';
-import Cover from './Cover/Cover';
-import Footer from './Footer/Footer';
-import CFP from './CFP/CFP';
-// import Speakers from './Speakers/Speakers';
-import Sponsors from './Sponsors/Sponsors';
-import Partners from './Partners/Partners';
-import Speakers from './Speakers/Speakers';
-// import Venue from './Venue/Venue';
-// import Supporters from './Supporters/Supporters';
-// import Schedule from './Schedule/Schedule';
+import { Cover } from './Cover/Cover';
+import { Footer } from './Footer/Footer';
+import { CFP } from './CFP/CFP';
+import { Sponsors } from './Sponsors/Sponsors';
+import { Partners } from './Partners/Partners';
+import { Speakers } from './Speakers/Speakers';
 
 import './App.scss';
 
-function App() {
+export function App() {
   const [speakerId, setSpeakerId] = useState<string | undefined>('');
 
   useEffect(() => {
@@ -22,10 +18,6 @@ function App() {
       setSpeakerId(speakerId);
     }
   });
-
-  function onArrowClick() {
-    (window as any).bringIntoView(document.querySelector('.cfp'), 1000);
-  }
 
   const onSpeakerClick = useCallback(
     (name: string) => {
@@ -42,7 +34,7 @@ function App() {
 
   return (
     <div className="app">
-      <Cover onArrowClick={onArrowClick} />
+      <Cover />
       <CFP />
       <Speakers
         speakerId={speakerId}
@@ -58,8 +50,6 @@ function App() {
     </div>
   );
 }
-
-export default App;
 
 // tslint:disable:no-string-literal
 window['bringIntoView_started'] = 0;

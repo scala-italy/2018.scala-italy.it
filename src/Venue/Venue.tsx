@@ -41,30 +41,24 @@ const Map = withScriptjs(
   ))
 );
 
-export default class Venue extends React.PureComponent {
-  render() {
-    return (
-      <View column className="venue">
-        <View hAlignContent="center">
-          <h3>VENUE</h3>
-        </View>
-        <View>
-          <View grow className="map">
-            <Map
-              // tslint:disable-next-line:max-line-length
-              googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyAl-M7eb3lhLRgCqAjSj2q6ieJQXdVeghI"
-              loadingElement={<div style={{ height: `100%` }} />}
-              containerElement={<div style={{ width: '100%' }} />}
-              mapElement={<div style={{ height: `100%` }} />}
-            />
-          </View>
-          <img
-            className="venue-picture"
-            height="400px"
-            src={require('../assets/mediterraneo.jpg')}
+export function Venue() {
+  return (
+    <View column className="venue">
+      <View hAlignContent="center">
+        <h3>VENUE</h3>
+      </View>
+      <View>
+        <View grow className="map">
+          <Map
+            // tslint:disable-next-line:max-line-length
+            googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyAl-M7eb3lhLRgCqAjSj2q6ieJQXdVeghI"
+            loadingElement={<div style={{ height: `100%` }} />}
+            containerElement={<div style={{ width: '100%' }} />}
+            mapElement={<div style={{ height: `100%` }} />}
           />
         </View>
+        <img className="venue-picture" height="400px" src={require('../assets/mediterraneo.jpg')} />
       </View>
-    );
-  }
+    </View>
+  );
 }

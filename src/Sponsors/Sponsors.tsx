@@ -34,52 +34,51 @@ const silverSponsors = [
   }
 ];
 
-export default class Sponsors extends React.PureComponent {
-  onBecomeSponsorClick = () =>
-    window.open('mailto:info@scala-italy.it?subject=Scala%20Italy%20Sponsorship', '_blank')
+export function Sponsors() {
+  function onBecomeSponsorClick() {
+    window.open('mailto:info@scala-italy.it?subject=Scala%20Italy%20Sponsorship', '_blank');
+  }
 
-  render() {
-    return (
-      <FlexView column grow className="sponsors-section" hAlignContent="center">
-        <div className="section-name left">Sponsors</div>
-        <div className="section-name right">Sponsors</div>
-        <FlexView column hAlignContent="center">
-          <h1>SPONSORS</h1>
-          <h2>GOLD SPONSORS</h2>
-          <FlexView
-            style={{ flexWrap: 'wrap', maxWidth: 1000 }}
-            hAlignContent="center"
-            width="100%"
-            vAlignContent="center"
-          >
-            {goldSponsors.map(({ logo, link, name }) => (
-              <a key={name} href={link} target="_blank">
-                <img className="gold" src={logo} />
-              </a>
-            ))}
-          </FlexView>
-          <FlexView basis={50} />
-          <h2>SILVER SPONSORS</h2>
-          <FlexView
-            style={{ flexWrap: 'wrap', maxWidth: 1000 }}
-            hAlignContent="center"
-            width="100%"
-            vAlignContent="center"
-          >
-            {silverSponsors.map(({ logo, link, name }) => (
-              <a key={name} href={link} target="_blank">
-                <img className="silver" src={logo} height={20} />
-              </a>
-            ))}
-          </FlexView>
+  return (
+    <FlexView column grow className="sponsors-section" hAlignContent="center">
+      <div className="section-name left">Sponsors</div>
+      <div className="section-name right">Sponsors</div>
+      <FlexView column hAlignContent="center">
+        <h1>SPONSORS</h1>
+        <h2>GOLD SPONSORS</h2>
+        <FlexView
+          style={{ flexWrap: 'wrap', maxWidth: 1000 }}
+          hAlignContent="center"
+          width="100%"
+          vAlignContent="center"
+        >
+          {goldSponsors.map(({ logo, link, name }) => (
+            <a key={name} href={link} target="_blank">
+              <img className="gold" src={logo} />
+            </a>
+          ))}
         </FlexView>
         <FlexView basis={50} />
-        <FlexView>
-          <Button className="action-button" buttonState="ready" onClick={this.onBecomeSponsorClick}>
-            Become a Sponsor
-          </Button>
+        <h2>SILVER SPONSORS</h2>
+        <FlexView
+          style={{ flexWrap: 'wrap', maxWidth: 1000 }}
+          hAlignContent="center"
+          width="100%"
+          vAlignContent="center"
+        >
+          {silverSponsors.map(({ logo, link, name }) => (
+            <a key={name} href={link} target="_blank">
+              <img className="silver" src={logo} height={20} />
+            </a>
+          ))}
         </FlexView>
       </FlexView>
-    );
-  }
+      <FlexView basis={50} />
+      <FlexView>
+        <Button className="action-button" buttonState="ready" onClick={onBecomeSponsorClick}>
+          Become a Sponsor
+        </Button>
+      </FlexView>
+    </FlexView>
+  );
 }
