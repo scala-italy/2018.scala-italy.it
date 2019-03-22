@@ -15,7 +15,7 @@ export function Cover() {
     <div className="cover-page">
       <img className="logo" src={logo} />
       <h1>The Italian conference on Scala</h1>
-      <h3>Bologna, September 20th-21th, 2019</h3>
+      <h3>Bologna, September 20th-21st, 2019</h3>
       {/* <Button
           buttonState="ready"
           className="action-button ticket-button"
